@@ -11,60 +11,19 @@
 		2C2114692C075CC10013EBD9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2114682C075CC10013EBD9 /* HomeView.swift */; };
 		2C21146D2C075CC20013EBD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C21146C2C075CC20013EBD9 /* Assets.xcassets */; };
 		2C2114712C075CC20013EBD9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C2114702C075CC20013EBD9 /* Preview Assets.xcassets */; };
-		2C21147B2C075CC20013EBD9 /* StardustTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C21147A2C075CC20013EBD9 /* StardustTests.swift */; };
-		2C2114852C075CC20013EBD9 /* StardustUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2114842C075CC20013EBD9 /* StardustUITests.swift */; };
-		2C2114872C075CC20013EBD9 /* StardustUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2114862C075CC20013EBD9 /* StardustUITestsLaunchTests.swift */; };
 		2C2114942C0776E30013EBD9 /* CreateGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2114932C0776E30013EBD9 /* CreateGoal.swift */; };
-		2C2114962C0866580013EBD9 /* StarRainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2114952C0866580013EBD9 /* StarRainView.swift */; };
-		2C9984FF2C08E7AD0011295C /* StarRainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2114952C0866580013EBD9 /* StarRainView.swift */; };
-		2C9985002C08E7AD0011295C /* CreateGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2114932C0776E30013EBD9 /* CreateGoal.swift */; };
-		2C9985012C08E7C30011295C /* StarRainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2114952C0866580013EBD9 /* StarRainView.swift */; };
+		2C5522B32C099D6100EBBA3C /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5522B22C099D6100EBBA3C /* CloseButton.swift */; };
+		2C5522CC2C09A22000EBBA3C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5522CB2C09A22000EBBA3C /* Color.swift */; };
+		2C5522CE2C09B8C900EBBA3C /* CreateStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5522CD2C09B8C900EBBA3C /* CreateStarView.swift */; };
+		2C5522D02C09BCF800EBBA3C /* StarShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5522CF2C09BCF800EBBA3C /* StarShape.swift */; };
 		2CA189982C087DBE00FACAB6 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA189972C087DBE00FACAB6 /* FontStyle.swift */; };
 		2CA189AE2C08917100FACAB6 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA189A92C08917100FACAB6 /* Pretendard-Bold.otf */; };
-		2CA189AF2C08917100FACAB6 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA189A92C08917100FACAB6 /* Pretendard-Bold.otf */; };
-		2CA189B02C08917100FACAB6 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA189A92C08917100FACAB6 /* Pretendard-Bold.otf */; };
 		2CA189B12C08917100FACAB6 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA189AA2C08917100FACAB6 /* Pretendard-Medium.otf */; };
-		2CA189B22C08917100FACAB6 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA189AA2C08917100FACAB6 /* Pretendard-Medium.otf */; };
-		2CA189B32C08917100FACAB6 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA189AA2C08917100FACAB6 /* Pretendard-Medium.otf */; };
 		2CA189B42C08917100FACAB6 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA189AB2C08917100FACAB6 /* Pretendard-Regular.otf */; };
-		2CA189B52C08917100FACAB6 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA189AB2C08917100FACAB6 /* Pretendard-Regular.otf */; };
-		2CA189B62C08917100FACAB6 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA189AB2C08917100FACAB6 /* Pretendard-Regular.otf */; };
 		2CA189B72C08917100FACAB6 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA189AC2C08917100FACAB6 /* Pretendard-SemiBold.otf */; };
-		2CA189B82C08917100FACAB6 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA189AC2C08917100FACAB6 /* Pretendard-SemiBold.otf */; };
-		2CA189B92C08917100FACAB6 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA189AC2C08917100FACAB6 /* Pretendard-SemiBold.otf */; };
 		2CA189BB2C08DF4D00FACAB6 /* GoalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA189BA2C08DF4D00FACAB6 /* GoalDetailView.swift */; };
-		2CA189BC2C08DF4D00FACAB6 /* GoalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA189BA2C08DF4D00FACAB6 /* GoalDetailView.swift */; };
-		2CA189BD2C08DF4D00FACAB6 /* GoalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA189BA2C08DF4D00FACAB6 /* GoalDetailView.swift */; };
 		2CA189BF2C08E4B000FACAB6 /* ProverbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA189BE2C08E4B000FACAB6 /* ProverbView.swift */; };
-		2CA189C02C08E4B000FACAB6 /* ProverbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA189BE2C08E4B000FACAB6 /* ProverbView.swift */; };
-		2CA189C12C08E4B000FACAB6 /* ProverbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA189BE2C08E4B000FACAB6 /* ProverbView.swift */; };
-		2CA189C22C08E5EF00FACAB6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C2114702C075CC20013EBD9 /* Preview Assets.xcassets */; };
-		2CA189C32C08E5F200FACAB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C21146C2C075CC20013EBD9 /* Assets.xcassets */; };
-		2CA189C42C08E63E00FACAB6 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA189972C087DBE00FACAB6 /* FontStyle.swift */; };
-		2CA189C52C08E64C00FACAB6 /* StardustApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2114662C075CC10013EBD9 /* StardustApp.swift */; };
-		2CA189C62C08E64C00FACAB6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2114682C075CC10013EBD9 /* HomeView.swift */; };
-		2CA189C72C08E64C00FACAB6 /* CreateGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2114932C0776E30013EBD9 /* CreateGoal.swift */; };
-		2CA189C82C08E65700FACAB6 /* StardustApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2114662C075CC10013EBD9 /* StardustApp.swift */; };
-		2CA189C92C08E65700FACAB6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2114682C075CC10013EBD9 /* HomeView.swift */; };
-		2CA189CA2C08E65700FACAB6 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA189972C087DBE00FACAB6 /* FontStyle.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		2C2114772C075CC20013EBD9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2C21145B2C075CC10013EBD9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2C2114622C075CC10013EBD9;
-			remoteInfo = Stardust;
-		};
-		2C2114812C075CC20013EBD9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2C21145B2C075CC10013EBD9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2C2114622C075CC10013EBD9;
-			remoteInfo = Stardust;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2C2114632C075CC10013EBD9 /* Stardust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stardust.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,13 +32,11 @@
 		2C21146C2C075CC20013EBD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C21146E2C075CC20013EBD9 /* Stardust.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Stardust.entitlements; sourceTree = "<group>"; };
 		2C2114702C075CC20013EBD9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2C2114762C075CC20013EBD9 /* StardustTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StardustTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C21147A2C075CC20013EBD9 /* StardustTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StardustTests.swift; sourceTree = "<group>"; };
-		2C2114802C075CC20013EBD9 /* StardustUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StardustUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C2114842C075CC20013EBD9 /* StardustUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StardustUITests.swift; sourceTree = "<group>"; };
-		2C2114862C075CC20013EBD9 /* StardustUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StardustUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2C2114932C0776E30013EBD9 /* CreateGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoal.swift; sourceTree = "<group>"; };
-		2C2114952C0866580013EBD9 /* StarRainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRainView.swift; sourceTree = "<group>"; };
+		2C5522B22C099D6100EBBA3C /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		2C5522CB2C09A22000EBBA3C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		2C5522CD2C09B8C900EBBA3C /* CreateStarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStarView.swift; sourceTree = "<group>"; };
+		2C5522CF2C09BCF800EBBA3C /* StarShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShape.swift; sourceTree = "<group>"; };
 		2CA189972C087DBE00FACAB6 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		2CA189A42C087FEF00FACAB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CA189A92C08917100FACAB6 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
@@ -98,20 +55,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2C2114732C075CC20013EBD9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2C21147D2C075CC20013EBD9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -119,8 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				2C2114652C075CC10013EBD9 /* Stardust */,
-				2C2114792C075CC20013EBD9 /* StardustTests */,
-				2C2114832C075CC20013EBD9 /* StardustUITests */,
 				2C2114642C075CC10013EBD9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -129,8 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				2C2114632C075CC10013EBD9 /* Stardust.app */,
-				2C2114762C075CC20013EBD9 /* StardustTests.xctest */,
-				2C2114802C075CC20013EBD9 /* StardustUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,9 +82,12 @@
 				2CA189BE2C08E4B000FACAB6 /* ProverbView.swift */,
 				2CA189AD2C08917100FACAB6 /* Fonts */,
 				2CA189A42C087FEF00FACAB6 /* Info.plist */,
-				2C2114952C0866580013EBD9 /* StarRainView.swift */,
 				2C2114932C0776E30013EBD9 /* CreateGoal.swift */,
+				2C5522B22C099D6100EBBA3C /* CloseButton.swift */,
 				2CA189BA2C08DF4D00FACAB6 /* GoalDetailView.swift */,
+				2C5522CD2C09B8C900EBBA3C /* CreateStarView.swift */,
+				2C5522CF2C09BCF800EBBA3C /* StarShape.swift */,
+				2C5522CB2C09A22000EBBA3C /* Color.swift */,
 				2CA189972C087DBE00FACAB6 /* FontStyle.swift */,
 				2C21146C2C075CC20013EBD9 /* Assets.xcassets */,
 				2C21146E2C075CC20013EBD9 /* Stardust.entitlements */,
@@ -160,23 +102,6 @@
 				2C2114702C075CC20013EBD9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		2C2114792C075CC20013EBD9 /* StardustTests */ = {
-			isa = PBXGroup;
-			children = (
-				2C21147A2C075CC20013EBD9 /* StardustTests.swift */,
-			);
-			path = StardustTests;
-			sourceTree = "<group>";
-		};
-		2C2114832C075CC20013EBD9 /* StardustUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2C2114842C075CC20013EBD9 /* StardustUITests.swift */,
-				2C2114862C075CC20013EBD9 /* StardustUITestsLaunchTests.swift */,
-			);
-			path = StardustUITests;
 			sourceTree = "<group>";
 		};
 		2CA189AD2C08917100FACAB6 /* Fonts */ = {
@@ -210,42 +135,6 @@
 			productReference = 2C2114632C075CC10013EBD9 /* Stardust.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2C2114752C075CC20013EBD9 /* StardustTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2C21148D2C075CC20013EBD9 /* Build configuration list for PBXNativeTarget "StardustTests" */;
-			buildPhases = (
-				2C2114722C075CC20013EBD9 /* Sources */,
-				2C2114732C075CC20013EBD9 /* Frameworks */,
-				2C2114742C075CC20013EBD9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2C2114782C075CC20013EBD9 /* PBXTargetDependency */,
-			);
-			name = StardustTests;
-			productName = StardustTests;
-			productReference = 2C2114762C075CC20013EBD9 /* StardustTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		2C21147F2C075CC20013EBD9 /* StardustUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2C2114902C075CC20013EBD9 /* Build configuration list for PBXNativeTarget "StardustUITests" */;
-			buildPhases = (
-				2C21147C2C075CC20013EBD9 /* Sources */,
-				2C21147D2C075CC20013EBD9 /* Frameworks */,
-				2C21147E2C075CC20013EBD9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2C2114822C075CC20013EBD9 /* PBXTargetDependency */,
-			);
-			name = StardustUITests;
-			productName = StardustUITests;
-			productReference = 2C2114802C075CC20013EBD9 /* StardustUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -258,14 +147,6 @@
 				TargetAttributes = {
 					2C2114622C075CC10013EBD9 = {
 						CreatedOnToolsVersion = 15.4;
-					};
-					2C2114752C075CC20013EBD9 = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 2C2114622C075CC10013EBD9;
-					};
-					2C21147F2C075CC20013EBD9 = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 2C2114622C075CC10013EBD9;
 					};
 				};
 			};
@@ -283,8 +164,6 @@
 			projectRoot = "";
 			targets = (
 				2C2114622C075CC10013EBD9 /* Stardust */,
-				2C2114752C075CC20013EBD9 /* StardustTests */,
-				2C21147F2C075CC20013EBD9 /* StardustUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -303,30 +182,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2C2114742C075CC20013EBD9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2CA189AF2C08917100FACAB6 /* Pretendard-Bold.otf in Resources */,
-				2CA189B52C08917100FACAB6 /* Pretendard-Regular.otf in Resources */,
-				2CA189B22C08917100FACAB6 /* Pretendard-Medium.otf in Resources */,
-				2CA189B82C08917100FACAB6 /* Pretendard-SemiBold.otf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2C21147E2C075CC20013EBD9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2CA189C32C08E5F200FACAB6 /* Assets.xcassets in Resources */,
-				2CA189C22C08E5EF00FACAB6 /* Preview Assets.xcassets in Resources */,
-				2CA189B02C08917100FACAB6 /* Pretendard-Bold.otf in Resources */,
-				2CA189B62C08917100FACAB6 /* Pretendard-Regular.otf in Resources */,
-				2CA189B32C08917100FACAB6 /* Pretendard-Medium.otf in Resources */,
-				2CA189B92C08917100FACAB6 /* Pretendard-SemiBold.otf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -334,61 +189,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C5522CE2C09B8C900EBBA3C /* CreateStarView.swift in Sources */,
 				2CA189BB2C08DF4D00FACAB6 /* GoalDetailView.swift in Sources */,
-				2C2114962C0866580013EBD9 /* StarRainView.swift in Sources */,
 				2C2114692C075CC10013EBD9 /* HomeView.swift in Sources */,
+				2C5522D02C09BCF800EBBA3C /* StarShape.swift in Sources */,
 				2CA189BF2C08E4B000FACAB6 /* ProverbView.swift in Sources */,
 				2C2114942C0776E30013EBD9 /* CreateGoal.swift in Sources */,
 				2C2114672C075CC10013EBD9 /* StardustApp.swift in Sources */,
+				2C5522B32C099D6100EBBA3C /* CloseButton.swift in Sources */,
 				2CA189982C087DBE00FACAB6 /* FontStyle.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2C2114722C075CC20013EBD9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2C9985012C08E7C30011295C /* StarRainView.swift in Sources */,
-				2CA189C52C08E64C00FACAB6 /* StardustApp.swift in Sources */,
-				2CA189C62C08E64C00FACAB6 /* HomeView.swift in Sources */,
-				2CA189C72C08E64C00FACAB6 /* CreateGoal.swift in Sources */,
-				2CA189C42C08E63E00FACAB6 /* FontStyle.swift in Sources */,
-				2CA189C02C08E4B000FACAB6 /* ProverbView.swift in Sources */,
-				2CA189BC2C08DF4D00FACAB6 /* GoalDetailView.swift in Sources */,
-				2C21147B2C075CC20013EBD9 /* StardustTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2C21147C2C075CC20013EBD9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2C9984FF2C08E7AD0011295C /* StarRainView.swift in Sources */,
-				2C9985002C08E7AD0011295C /* CreateGoal.swift in Sources */,
-				2CA189C82C08E65700FACAB6 /* StardustApp.swift in Sources */,
-				2CA189C92C08E65700FACAB6 /* HomeView.swift in Sources */,
-				2CA189CA2C08E65700FACAB6 /* FontStyle.swift in Sources */,
-				2CA189BD2C08DF4D00FACAB6 /* GoalDetailView.swift in Sources */,
-				2C2114872C075CC20013EBD9 /* StardustUITestsLaunchTests.swift in Sources */,
-				2C2114852C075CC20013EBD9 /* StardustUITests.swift in Sources */,
-				2CA189C12C08E4B000FACAB6 /* ProverbView.swift in Sources */,
+				2C5522CC2C09A22000EBBA3C /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		2C2114782C075CC20013EBD9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2C2114622C075CC10013EBD9 /* Stardust */;
-			targetProxy = 2C2114772C075CC20013EBD9 /* PBXContainerItemProxy */;
-		};
-		2C2114822C075CC20013EBD9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2C2114622C075CC10013EBD9 /* Stardust */;
-			targetProxy = 2C2114812C075CC20013EBD9 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2C2114882C075CC20013EBD9 /* Debug */ = {
@@ -587,100 +401,6 @@
 			};
 			name = Release;
 		};
-		2C21148E2C075CC20013EBD9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U4BQZ3AXAA;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sueunkim.StardustTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stardust.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Stardust";
-			};
-			name = Debug;
-		};
-		2C21148F2C075CC20013EBD9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U4BQZ3AXAA;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sueunkim.StardustTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stardust.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Stardust";
-			};
-			name = Release;
-		};
-		2C2114912C075CC20013EBD9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U4BQZ3AXAA;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sueunkim.StardustUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_TARGET_NAME = Stardust;
-			};
-			name = Debug;
-		};
-		2C2114922C075CC20013EBD9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U4BQZ3AXAA;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sueunkim.StardustUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_TARGET_NAME = Stardust;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -698,24 +418,6 @@
 			buildConfigurations = (
 				2C21148B2C075CC20013EBD9 /* Debug */,
 				2C21148C2C075CC20013EBD9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2C21148D2C075CC20013EBD9 /* Build configuration list for PBXNativeTarget "StardustTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2C21148E2C075CC20013EBD9 /* Debug */,
-				2C21148F2C075CC20013EBD9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2C2114902C075CC20013EBD9 /* Build configuration list for PBXNativeTarget "StardustUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2C2114912C075CC20013EBD9 /* Debug */,
-				2C2114922C075CC20013EBD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

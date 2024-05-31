@@ -18,10 +18,14 @@ struct CreateGoal: View {
             ZStack{
                 gradient.ignoresSafeArea()
                 VStack{
-                    Text("오늘의 목표 제목을 설정해 주세요!")
-                        .font(AppFont.title1Bold)
-                        .foregroundStyle(.white)
-                        .frame(maxWidth: .infinity,alignment: .leading)
+                    Spacer()
+                        .frame(height: 100)
+                    HStack(spacing: 0){
+                        Text("오늘의 목표 제목을 설정해 주세요!")
+                            .font(AppFont.title1Bold)
+                            .foregroundStyle(.white)
+                        Spacer()
+                    }
                     Spacer()
                     TextField("",text: $title,prompt: Text("목표 제목을 입력해주세요!").font(AppFont.calloutBold)
                         .foregroundStyle(.gray))
@@ -38,15 +42,17 @@ struct CreateGoal: View {
                        GoalDetailView(title: $title)
                     }label: {
                         Text("다음으로")
-                            .foregroundStyle(.white)
-                            .font(AppFont.bodyBold)
                             .frame(maxWidth: .infinity)
-                            .frame(height: 30)
-                            .padding(10)
-                            .background(RoundedRectangle(cornerRadius: 10)
-                                .fill( isFocused ? .white : .black)
+                            .frame(height: 50)
+                            .foregroundStyle(.white)
+                            .font(AppFont.title3Bold)
+                            .background(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .fill(.dark)
                             )
                     }
+                    .disabled(title.isEmpty)
+                    .padding(.vertical,16)
                 }
                 .padding(.horizontal,16)
             }
@@ -54,6 +60,11 @@ struct CreateGoal: View {
             .navigationBarTitleDisplayMode(.inline)
             .onAppear{
                 isFocused = true
+            }
+            .toolbar {
+                ToolbarItem (placement: .topBarTrailing){
+                    CloseButton()
+                }
             }
         }
     }
