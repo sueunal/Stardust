@@ -46,7 +46,8 @@ struct GoalDetailView: View {
                 }
             }
             .navigationDestination(isPresented: $createGoal){
-                
+                GoalResultView(title: $title, goalDetail: $detailGoalText)
+                    .navigationBarBackButtonHidden(true)
             }
         }
     }
@@ -66,6 +67,7 @@ struct GoalDetailView: View {
                             .fill(.dark)
                     )
             }
+            .padding(.vertical,16)
             .disabled(detailGoalText.isEmpty)
         }
     }

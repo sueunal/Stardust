@@ -18,7 +18,6 @@ struct HomeView: View {
     var body: some View {
         NavigationStack{
             ZStack{
-                CreateStarView()
                 ProverbView()
                     .ignoresSafeArea()
                 VStack{
