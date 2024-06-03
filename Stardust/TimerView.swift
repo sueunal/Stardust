@@ -15,7 +15,7 @@ struct TimerView: View {
         VStack {
             Text(timeString(from: timeRemaining))
                 .font(.system(size: 80))
-                .foregroundStyle(.white.opacity(0.3))
+                .foregroundStyle(.white.opacity(0.8).gradient)
                 .padding()
         }
         .onAppear{
@@ -24,8 +24,7 @@ struct TimerView: View {
     }
     
     func startTimer() {
-        timer?.invalidate() // 기존 타이머가 있으면 무효화합니다.
-        
+        timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
             updateTimeRemaining()
         }

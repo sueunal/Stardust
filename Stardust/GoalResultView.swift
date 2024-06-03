@@ -21,7 +21,6 @@ struct GoalResultView: View {
                         .frame(height: 16)
                     Text("미래를 예측하는 가장 좋은 방법은 그것을 창조하는 것이다.")
                         .font(.subheadline)
-                        .italic()
                         .foregroundStyle(.white)
                         .padding(.vertical,2)
                     Text("- 피터 드러커 -")
@@ -36,22 +35,7 @@ struct GoalResultView: View {
                         )
                         .animation(.easeInOut(duration: 1.0), value: isFlipped)
                     Spacer()
-                    Button{
-                        showHomeView.toggle()
-                    }label: {
-                        Text("확인")
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 50)
-                            .foregroundStyle(.white)
-                            .background(
-                                RoundedRectangle(cornerRadius: 8)
-                                    .fill(Color.background.opacity(0.8))
-                            )
-                            .shadow(radius: 1,y: 2)
-                    }
-                    .padding(.horizontal,16)
-                    .padding(.vertical,16)
-                    
+                    completeButton()
                 }
                 .onAppear{
                     isFlipped.toggle()
@@ -63,6 +47,24 @@ struct GoalResultView: View {
             }
         }
     }
+    @ViewBuilder
+    func completeButton()-> some View{
+        Button{
+            showHomeView.toggle()
+        }label: {
+            Text("확인")
+                .frame(maxWidth: .infinity)
+                .frame(height: 50)
+                .foregroundStyle(.white)
+                .background(
+                    RoundedRectangle(cornerRadius: 8)
+                        .fill(Color.background.opacity(0.8))
+                )
+                .shadow(radius: 1,y: 2)
+        }
+        .padding(.horizontal,16)
+        .padding(.vertical,16)
+    }
 }
 
 
@@ -72,16 +74,17 @@ struct CardOverlayView: View {
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 16)
-                .strokeBorder(LinearGradient(colors: [Color.white.opacity(0.3), Color.white.opacity(0), Color.white.opacity(0.3)], startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: 1)
+                .strokeBorder(LinearGradient(colors: [Color.white.opacity(0.3), Color.white.opacity(1), Color.white.opacity(0.3)], startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: 1)
             VStack(spacing: 0){
                 Text("\(title)")
                     .font(AppFont.title2Bold)
                     .foregroundStyle(.white)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .frame(maxWidth: .infinity, alignment: .center)
                     .frame(height: 50)
                 Divider()
-                    .background(.white.opacity(0.3))
+                    .frame(height: 1)
                     .frame(maxWidth: .infinity)
+                    .overlay(.white.opacity(0.3))
                 Spacer()
                     .frame(height: 32)
                 Text(goalDetail)

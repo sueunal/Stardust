@@ -19,9 +19,15 @@ struct HomeView: View {
         NavigationStack{
             ZStack{
                 ProverbView()
-                    .ignoresSafeArea()
                 VStack{
                     Spacer()
+                    ToDoListView()
+                    Text("남은 시간")
+                        .font(AppFont.title2Bold)
+                        .foregroundStyle(.white)
+                    TimerView()
+                    Spacer()
+                        .frame(height: 200)
                     Button{
                         createNewGoal.toggle()
                     } label: {
@@ -46,13 +52,6 @@ struct HomeView: View {
                     CreateGoal()
                 }
             }
-        }
-    }
-}
-struct ToDoView: View {
-    var body: some View {
-        VStack{
-            Text("오늘 이룰 것들")
         }
     }
 }

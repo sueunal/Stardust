@@ -17,6 +17,8 @@
 		2C5522CC2C09A22000EBBA3C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5522CB2C09A22000EBBA3C /* Color.swift */; };
 		2C5522CE2C09B8C900EBBA3C /* GoalResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5522CD2C09B8C900EBBA3C /* GoalResultView.swift */; };
 		2C5522D02C09BCF800EBBA3C /* StarShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5522CF2C09BCF800EBBA3C /* StarShape.swift */; };
+		2C7013CB2C0C482C00ACBFA0 /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7013CA2C0C482C00ACBFA0 /* ToDoListView.swift */; };
+		2C8800B42C0E077300972764 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8800B32C0E077300972764 /* ToDoItem.swift */; };
 		2CA189982C087DBE00FACAB6 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA189972C087DBE00FACAB6 /* FontStyle.swift */; };
 		2CA189AE2C08917100FACAB6 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA189A92C08917100FACAB6 /* Pretendard-Bold.otf */; };
 		2CA189B12C08917100FACAB6 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA189AA2C08917100FACAB6 /* Pretendard-Medium.otf */; };
@@ -39,6 +41,8 @@
 		2C5522CB2C09A22000EBBA3C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2C5522CD2C09B8C900EBBA3C /* GoalResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalResultView.swift; sourceTree = "<group>"; };
 		2C5522CF2C09BCF800EBBA3C /* StarShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShape.swift; sourceTree = "<group>"; };
+		2C7013CA2C0C482C00ACBFA0 /* ToDoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
+		2C8800B32C0E077300972764 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		2CA189972C087DBE00FACAB6 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		2CA189A42C087FEF00FACAB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CA189A92C08917100FACAB6 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
@@ -80,10 +84,12 @@
 			isa = PBXGroup;
 			children = (
 				2C2114662C075CC10013EBD9 /* StardustApp.swift */,
-				2C2114682C075CC10013EBD9 /* HomeView.swift */,
-				2CA189BE2C08E4B000FACAB6 /* ProverbView.swift */,
-				2CA189AD2C08917100FACAB6 /* Fonts */,
 				2CA189A42C087FEF00FACAB6 /* Info.plist */,
+				2CA189AD2C08917100FACAB6 /* Fonts */,
+				2C2114682C075CC10013EBD9 /* HomeView.swift */,
+				2C7013CA2C0C482C00ACBFA0 /* ToDoListView.swift */,
+				2C8800B32C0E077300972764 /* ToDoItem.swift */,
+				2CA189BE2C08E4B000FACAB6 /* ProverbView.swift */,
 				2C2114932C0776E30013EBD9 /* CreateGoal.swift */,
 				2C5522B22C099D6100EBBA3C /* CloseButton.swift */,
 				2CA189BA2C08DF4D00FACAB6 /* GoalDetailView.swift */,
@@ -198,8 +204,10 @@
 				2C5522D02C09BCF800EBBA3C /* StarShape.swift in Sources */,
 				2CA189BF2C08E4B000FACAB6 /* ProverbView.swift in Sources */,
 				2C2114942C0776E30013EBD9 /* CreateGoal.swift in Sources */,
+				2C7013CB2C0C482C00ACBFA0 /* ToDoListView.swift in Sources */,
 				2C229FEA2C0B8EC100186D66 /* TimerView.swift in Sources */,
 				2C2114672C075CC10013EBD9 /* StardustApp.swift in Sources */,
+				2C8800B42C0E077300972764 /* ToDoItem.swift in Sources */,
 				2C5522B32C099D6100EBBA3C /* CloseButton.swift in Sources */,
 				2CA189982C087DBE00FACAB6 /* FontStyle.swift in Sources */,
 				2C5522CC2C09A22000EBBA3C /* Color.swift in Sources */,
