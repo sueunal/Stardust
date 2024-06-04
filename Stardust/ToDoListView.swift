@@ -8,26 +8,32 @@
 import SwiftUI
 
 struct ToDoListView: View {
+    @State private var showToDoView: Bool = false
     var body: some View {
-        VStack{
-            Spacer()
-                .frame(height: 32)
-            Button{
-                
-            }label: {
-                Image(systemName: "list.bullet")
-                    .resizable()
-                    .frame(width: 15,height: 15)
-                    .foregroundStyle(.black)
-                    .padding(7)
-                    .background(
-                        Circle()
-                            .fill(.white)
-                    )
-                    .frame(maxWidth: .infinity, alignment: .trailing)
-                    .shadow(radius: 1,y: 2)
+        NavigationStack{
+            VStack{
+                Spacer()
+                    .frame(height: 32)
+                Button{
+                    showToDoView.toggle()
+                }label: {
+                    Image(systemName: "list.bullet")
+                        .resizable()
+                        .frame(width: 15,height: 15)
+                        .foregroundStyle(.black)
+                        .padding(7)
+                        .background(
+                            Circle()
+                                .fill(.white)
+                        )
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .shadow(radius: 1,y: 2)
+                }
+                Spacer()
             }
-            Spacer()
+            .navigationDestination(isPresented: $showToDoView){
+               ToDoItem()
+            }
         }
     }
 }

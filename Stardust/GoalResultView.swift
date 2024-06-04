@@ -29,11 +29,7 @@ struct GoalResultView: View {
                         .foregroundStyle(.white)
                     Spacer()
                     CardOverlayView(title: title, goalDetail: goalDetail)
-                        .rotation3DEffect(
-                            .degrees(isFlipped ? 360 : 0),
-                            axis: (x: 0, y: 1, z: 0)
-                        )
-                        .animation(.easeInOut(duration: 1.0), value: isFlipped)
+                    //                        .animation(.easeInOut(duration: 1.0), value: isFlipped)
                     Spacer()
                     completeButton()
                 }
@@ -41,7 +37,7 @@ struct GoalResultView: View {
                     isFlipped.toggle()
                 }
                 .navigationDestination(isPresented: $showHomeView){
-                   HomeView()
+                    HomeView()
                         .navigationBarBackButtonHidden(true)
                 }
             }
@@ -72,7 +68,7 @@ struct CardOverlayView: View {
     let title: String
     let goalDetail: String
     var body: some View {
-        ZStack{
+        ZStack(alignment:.center){
             RoundedRectangle(cornerRadius: 16)
                 .strokeBorder(LinearGradient(colors: [Color.white.opacity(0.3), Color.white.opacity(1), Color.white.opacity(0.3)], startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: 1)
             VStack(spacing: 0){
