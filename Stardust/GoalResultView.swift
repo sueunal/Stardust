@@ -29,7 +29,6 @@ struct GoalResultView: View {
                         .foregroundStyle(.white)
                     Spacer()
                     CardOverlayView(title: title, goalDetail: goalDetail)
-                    //                        .animation(.easeInOut(duration: 1.0), value: isFlipped)
                     Spacer()
                     completeButton()
                 }
@@ -74,8 +73,8 @@ struct CardOverlayView: View {
             VStack(spacing: 0){
                 Text("\(title)")
                     .font(AppFont.title2Bold)
-                    .foregroundStyle(.white)
-                    .frame(maxWidth: .infinity, alignment: .center)
+                    .foregroundStyle(.text)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                     .frame(height: 50)
                 Divider()
                     .frame(height: 1)
@@ -100,5 +99,5 @@ struct CardOverlayView: View {
 
 
 #Preview{
-    GoalResultView(title: .constant("운동하기"), goalDetail: .constant("30분 걷기"))
+    GoalResultView(title: .constant("운동하기"), goalDetail: .constant(" - 오늘의 계획 자세하게 입력\n - 오늘의 계획 자세하게 입력"))
 }
