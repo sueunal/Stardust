@@ -11,6 +11,8 @@ struct GoalDetailView: View {
     let gradiant = AngularGradient(colors: [.background,.white], center: .top)
     @Binding var title: String
     @State var detailGoalText: String = ""
+    @State var detailGoalList: [String] = []
+    @State private var isAddAnimation: Bool = false
     @FocusState var foucused
     @State private var createGoal: Bool = false
     var body: some View {
@@ -27,14 +29,52 @@ struct GoalDetailView: View {
                         Spacer()
                     }
                     Spacer()
-                    TextEditor(text: $detailGoalText)
-                        .frame(height: 200)
-                        .scrollContentBackground(.hidden)
-                        .background(
-                            AngularGradient(colors: [.dark,.white], center: .bottomTrailing)
-                        )
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .focused($foucused)
+                    ForEach(detailGoalList, id:\.self){ item in
+                       Rectangle()
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 30)
+                            .foregroundStyle(.white.gradient)
+                            .overlay{
+                               Text(item)
+                                    .font(.body)
+                                    .foregroundStyle(.black.gradient)
+                            }
+                            .animation(.easeInOut(duration: 0.5),value: isAddAnimation)
+                    }
+                    TextField(
+                        "",
+                        text: $detailGoalText,
+                        prompt:
+                            Text("자세한 계획을 입력해주세요!")
+                            .foregroundStyle(.white.opacity(0.8))
+                    )
+                    .padding(.horizontal,10)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 50)
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke()
+                            .foregroundStyle(.white.gradient)
+                    )
+                    .focused($foucused)
+                    .overlay{
+                        HStack{
+                            Spacer()
+                            Button{
+                                detailGoalList.append(detailGoalText)
+                            }label: {
+                                Text("등록")
+                                    .frame(height: 30)
+                                    .foregroundStyle(.black)
+                                    .padding(.horizontal,10)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 8)
+                                            .foregroundStyle(.white.gradient)
+                                    )
+                                    .padding(.horizontal,10)
+                            }
+                        }
+                    }
                     Spacer()
                     createStar()
                 }

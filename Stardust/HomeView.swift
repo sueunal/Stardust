@@ -40,9 +40,6 @@ struct HomeView: View {
                     CreateGoal()
                 }
             }
-            .onAppear{
-                viewModel.postGoal("운동하기", "30분 걷기 30분 달리기", "오늘 하루")
-            }
         }
     }
     @ViewBuilder
