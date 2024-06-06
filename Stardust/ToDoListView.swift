@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ToDoListView: View {
     @State private var showToDoView: Bool = false
+    @EnvironmentObject var viewModel: PlanViewModel
     var body: some View {
         NavigationStack{
             VStack{
@@ -32,7 +33,8 @@ struct ToDoListView: View {
                 Spacer()
             }
             .navigationDestination(isPresented: $showToDoView){
-               ToDoItem()
+                ToDoItem()
+                    .environmentObject(viewModel)
             }
         }
     }
@@ -40,4 +42,5 @@ struct ToDoListView: View {
 
 #Preview {
     ToDoListView()
+        .environmentObject(PlanViewModel())
 }

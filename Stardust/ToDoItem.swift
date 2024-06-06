@@ -8,7 +8,7 @@ import SwiftUI
 
 
 struct ToDoItem: View {
-    @ObservedObject var viewModel: PlanViewModel = PlanViewModel()
+    @EnvironmentObject var viewModel: PlanViewModel
     let gardient = AngularGradient(colors: [.black, .white], center: .top)
     var body: some View {
         NavigationStack{
@@ -22,7 +22,7 @@ struct ToDoItem: View {
                             .foregroundStyle(.white)
                         ForEach(viewModel.plans) { plan in
                             NavigationLink{
-                                Text("\(plan.title)")
+                                CheckToDoView(title: plan.title, message: plan.message)
                             }label: {
                                 Text("\(plan.title)")
                                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -75,4 +75,5 @@ struct ToDoItem: View {
 
 #Preview {
     ToDoItem()
+        .environmentObject(PlanViewModel())
 }

@@ -27,32 +27,22 @@ struct CreateGoal: View {
                         Spacer()
                     }
                     Spacer()
-                    TextField("",text: $title,prompt: Text("목표 제목을 입력해주세요!").font(AppFont.calloutBold)
-                        .foregroundStyle(.gray))
-                        .padding(10)
-                        .foregroundStyle(.white)
-                        .background(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke()
-                                .fill(.white.gradient)
-                        )
-                        .focused($isFocused)
+                    TextField("",
+                              text: $title,
+                              prompt: Text("목표 제목을 입력해주세요!")
+                        .font(AppFont.calloutBold)
+                        .foregroundStyle(.gray)
+                    )
+                    .padding(10)
+                    .foregroundStyle(.white)
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke()
+                            .fill(.white.gradient)
+                    )
+                    .focused($isFocused)
                     Spacer()
-                    NavigationLink{
-                       GoalDetailView(title: $title)
-                    }label: {
-                        Text("다음으로")
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 50)
-                            .foregroundStyle(.white)
-                            .font(AppFont.title3Bold)
-                            .background(
-                                RoundedRectangle(cornerRadius: 8)
-                                    .fill(.dark)
-                            )
-                    }
-                    .disabled(title.isEmpty)
-                    .padding(.vertical,16)
+                    nextButton()
                 }
                 .padding(.horizontal,16)
             }
@@ -67,6 +57,24 @@ struct CreateGoal: View {
                 }
             }
         }
+    }
+    @ViewBuilder
+    func nextButton()-> some View{
+        NavigationLink{
+            GoalDetailView(title: $title)
+        }label: {
+            Text("다음으로")
+                .frame(maxWidth: .infinity)
+                .frame(height: 50)
+                .foregroundStyle(.white)
+                .font(AppFont.title3Bold)
+                .background(
+                    RoundedRectangle(cornerRadius: 8)
+                        .fill(.dark)
+                )
+        }
+        .disabled(title.isEmpty)
+        .padding(.vertical,16)
     }
 }
 
