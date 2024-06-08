@@ -20,7 +20,7 @@ struct CreateGoal: View {
                     Spacer()
                         .frame(height: 100)
                     HStack(spacing: 0){
-                        Text("오늘의 목표 제목을 설정해 주세요!")
+                        Text("오늘의 목표 제목을 입력해 주세요!")
                             .font(AppFont.title1Bold)
                             .foregroundStyle(.white)
                         Spacer()

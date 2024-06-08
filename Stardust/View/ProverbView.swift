@@ -6,27 +6,45 @@
 //
 import SwiftUI
 
-struct ProverbModel{
-    let message: String
-    let writer: String
-}
 struct ProverbView: View {
     let gradient = AngularGradient(colors: [.black, .white], center: .top)
     
-    @State private var proverb: [ProverbModel] = [ProverbModel(message: "멈추지 않는 한, 얼마나 천천히 가는지는 중요하지 않다.", writer: "공자"),ProverbModel(message: "오늘 할 수 있는 일에 전력을 다하라. 그러면 내일에는 한걸음 더 진보한다.", writer: "뉴턴")]
+    @ObservedObject private var proverbViewModel = ProverbViewModel()
+    @State private var timer: Timer? = nil
     @State private var proverbIndex: Int = 0
     var body: some View {
         ZStack{
             gradient.ignoresSafeArea()
             VStack(spacing: 10){
-                Text(proverb[proverbIndex].message)
-                Text("- \(proverb[proverbIndex].writer) -")
+                Text(proverbViewModel.proverbs[proverbIndex].quote)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 50)
+                Text(proverbViewModel.proverbs[proverbIndex].author)
             }
             .foregroundStyle(.white)
             .font(AppFont.headlineBold)
             .transition(.slide)
             .animation(.easeInOut(duration: 0.5))
+            .padding(.horizontal,10)
         }
+        .onAppear {
+            startTimer()
+        }
+        .onDisappear {
+            stopTimer()
+        }
+    }
+    private func startTimer() {
+        let proverbsMax = proverbViewModel.proverbs.count - 1
+        timer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { _ in
+            if proverbIndex < proverbsMax{
+                proverbIndex += 1
+            }
+        }
+    }
+    private func stopTimer() {
+        timer?.invalidate()
+        timer = nil
     }
 }
 

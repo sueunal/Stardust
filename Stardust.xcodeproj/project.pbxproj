@@ -19,6 +19,9 @@
 		2C5522CE2C09B8C900EBBA3C /* GoalResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5522CD2C09B8C900EBBA3C /* GoalResultView.swift */; };
 		2C7013CB2C0C482C00ACBFA0 /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7013CA2C0C482C00ACBFA0 /* ToDoListView.swift */; };
 		2C8800B42C0E077300972764 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8800B32C0E077300972764 /* ToDoItem.swift */; };
+		2C9E4CAA2C147EAD00E2FD6C /* proverb.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C9E4CA92C147EAD00E2FD6C /* proverb.json */; };
+		2C9E4CAC2C147F8A00E2FD6C /* ProverbModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E4CAB2C147F8A00E2FD6C /* ProverbModel.swift */; };
+		2C9E4CAE2C14817900E2FD6C /* ProverbViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E4CAD2C14817900E2FD6C /* ProverbViewModel.swift */; };
 		2CA189982C087DBE00FACAB6 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA189972C087DBE00FACAB6 /* FontStyle.swift */; };
 		2CA189AE2C08917100FACAB6 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA189A92C08917100FACAB6 /* Pretendard-Bold.otf */; };
 		2CA189B12C08917100FACAB6 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA189AA2C08917100FACAB6 /* Pretendard-Medium.otf */; };
@@ -47,6 +50,9 @@
 		2C5522CD2C09B8C900EBBA3C /* GoalResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalResultView.swift; sourceTree = "<group>"; };
 		2C7013CA2C0C482C00ACBFA0 /* ToDoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
 		2C8800B32C0E077300972764 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
+		2C9E4CA92C147EAD00E2FD6C /* proverb.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = proverb.json; sourceTree = "<group>"; };
+		2C9E4CAB2C147F8A00E2FD6C /* ProverbModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProverbModel.swift; sourceTree = "<group>"; };
+		2C9E4CAD2C14817900E2FD6C /* ProverbViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProverbViewModel.swift; sourceTree = "<group>"; };
 		2CA189972C087DBE00FACAB6 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		2CA189A42C087FEF00FACAB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CA189A92C08917100FACAB6 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
@@ -95,6 +101,7 @@
 				2C3E98B52C1328980071C3F7 /* TimeManager.swift */,
 				2C21146E2C075CC20013EBD9 /* Stardust.entitlements */,
 				2CA189A42C087FEF00FACAB6 /* Info.plist */,
+				2C9E4CAF2C14894800E2FD6C /* Resources */,
 				2CF239B72C1433DD00224094 /* Util */,
 				2CF239B62C1433B900224094 /* Model */,
 				2CF239B52C14337F00224094 /* View */,
@@ -110,6 +117,14 @@
 				2C2114702C075CC20013EBD9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2C9E4CAF2C14894800E2FD6C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C9E4CA92C147EAD00E2FD6C /* proverb.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		2CA189AD2C08917100FACAB6 /* Fonts */ = {
@@ -144,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				2CF3F5342C0F55750026ACA3 /* GoalPlan.swift */,
+				2C9E4CAB2C147F8A00E2FD6C /* ProverbModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,8 +167,8 @@
 		2CF239B72C1433DD00224094 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				2C21146C2C075CC20013EBD9 /* Assets.xcassets */,
 				2CA189AD2C08917100FACAB6 /* Fonts */,
+				2C21146C2C075CC20013EBD9 /* Assets.xcassets */,
 				2C5522CB2C09A22000EBBA3C /* Color.swift */,
 				2CA189972C087DBE00FACAB6 /* FontStyle.swift */,
 			);
@@ -162,6 +178,7 @@
 		2CF239B82C14340700224094 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2C9E4CAD2C14817900E2FD6C /* ProverbViewModel.swift */,
 				2CF3F5362C0F55DC0026ACA3 /* PlanViewModel.swift */,
 			);
 			path = ViewModel;
@@ -233,6 +250,7 @@
 			files = (
 				2C2114712C075CC20013EBD9 /* Preview Assets.xcassets in Resources */,
 				2CA189AE2C08917100FACAB6 /* Pretendard-Bold.otf in Resources */,
+				2C9E4CAA2C147EAD00E2FD6C /* proverb.json in Resources */,
 				2CA189B42C08917100FACAB6 /* Pretendard-Regular.otf in Resources */,
 				2CA189B72C08917100FACAB6 /* Pretendard-SemiBold.otf in Resources */,
 				2C21146D2C075CC20013EBD9 /* Assets.xcassets in Resources */,
@@ -259,6 +277,8 @@
 				2C8800B42C0E077300972764 /* ToDoItem.swift in Sources */,
 				2CF3F5352C0F55750026ACA3 /* GoalPlan.swift in Sources */,
 				2CA189982C087DBE00FACAB6 /* FontStyle.swift in Sources */,
+				2C9E4CAC2C147F8A00E2FD6C /* ProverbModel.swift in Sources */,
+				2C9E4CAE2C14817900E2FD6C /* ProverbViewModel.swift in Sources */,
 				2CC6EA812C108897003445C3 /* CheckToDoView.swift in Sources */,
 				2C5522CC2C09A22000EBBA3C /* Color.swift in Sources */,
 				2CF3F5372C0F55DC0026ACA3 /* PlanViewModel.swift in Sources */,
