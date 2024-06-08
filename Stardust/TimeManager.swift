@@ -1,7 +1,7 @@
 import SwiftUI
 import Combine
 
-class TimageManager {
+final class TimageManager {
     let currentTimePublisher = Timer.TimerPublisher(interval: 1.0, runLoop: .main, mode: .default)
     let cancellable: AnyCancellable?
 

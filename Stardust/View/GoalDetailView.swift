@@ -31,13 +31,16 @@ struct GoalDetailView: View {
                         Spacer()
                     }
                     if detailGoalList.count <= 4{
-                        textFieldView()
+                        CustomTextField(text: $detailGoalText, promptText: "추가할 계획을 입력해주세요!")
+                            .overlay{
+                                detailGoalListButton()
+                            }
                     }else{
                         Rectangle()
                             .frame(height: 50)
                             .foregroundColor(.white)
                             .overlay{
-                               Text("최대 5개 까지만 입력 가능해요")
+                                Text("최대 5개 까지만 입력 가능해요")
                             }
                             .animation(.easeInOut(duration: 1) ,value: isShow)
                             .onAppear{
@@ -58,29 +61,6 @@ struct GoalDetailView: View {
                 GoalResultView(title: $title, goalDetail: $detailGoalText, detailGoalList: detailGoalList)
                     .navigationBarBackButtonHidden(true)
             }
-        }
-    }
-    @ViewBuilder
-    func textFieldView()-> some View{
-        TextField(
-            "",
-            text: $detailGoalText,
-            prompt:
-                Text("추가할 계획을 입력해주세요!")
-                .bold()
-                .foregroundStyle(.white.opacity(0.8))
-        )
-        .padding(.horizontal,10)
-        .frame(maxWidth: .infinity)
-        .frame(height: 50)
-        .background(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke()
-                .foregroundStyle(.white.gradient)
-        )
-        .focused($foucused)
-        .overlay{
-            detailGoalListButton()
         }
     }
     @ViewBuilder
