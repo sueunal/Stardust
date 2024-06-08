@@ -92,8 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				2C2114662C075CC10013EBD9 /* StardustApp.swift */,
-				2C21146E2C075CC20013EBD9 /* Stardust.entitlements */,
 				2C3E98B52C1328980071C3F7 /* TimeManager.swift */,
+				2C21146E2C075CC20013EBD9 /* Stardust.entitlements */,
 				2CA189A42C087FEF00FACAB6 /* Info.plist */,
 				2CF239B72C1433DD00224094 /* Util */,
 				2CF239B62C1433B900224094 /* Model */,
