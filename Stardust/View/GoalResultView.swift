@@ -7,6 +7,7 @@ struct GoalResultView: View {
     @State private var showHomeView: Bool = false
     @Binding var title: String
     @Binding var goalDetail: String
+    let detailGoalList: [String]
     var body: some View {
         NavigationStack{
             ZStack{
@@ -14,7 +15,7 @@ struct GoalResultView: View {
                 VStack{
                     Spacer()
                     TimerView()
-                    Text("오늘도 한 걸음 나아간 당신을 기대할게요!")
+                    Text("오늘도 한 걸음 나아갈 당신을 기대할게요!")
                         .font(AppFont.bodyBold)
                         .foregroundStyle(.white)
                     Spacer()
@@ -28,10 +29,20 @@ struct GoalResultView: View {
                         .italic()
                         .foregroundStyle(.white)
                     Spacer()
-                    CardOverlayView(title: title, goalDetail: goalDetail)
+                    Text(title)
+                        .font(AppFont.title1Bold)
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    ForEach(detailGoalList, id: \.self){ deatailGoalItem in
+                       Text(deatailGoalItem)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .font(AppFont.bodyRegular)
+                            .foregroundStyle(.white)
+                    }
                     Spacer()
                     completeButton()
                 }
+                .padding(.horizontal,16)
                 .onAppear{
                     isFlipped.toggle()
                 }
@@ -57,7 +68,6 @@ struct GoalResultView: View {
                 )
                 .shadow(radius: 1,y: 2)
         }
-        .padding(.horizontal,16)
         .padding(.vertical,16)
     }
 }
@@ -99,5 +109,5 @@ struct CardOverlayView: View {
 
 
 #Preview{
-    GoalResultView(title: .constant("운동하기"), goalDetail: .constant(" - 오늘의 계획 자세하게 입력\n - 오늘의 계획 자세하게 입력"))
+    GoalResultView(title: .constant("운동하기"), goalDetail: .constant(" - 오늘의 계획 자세하게 입력\n - 오늘의 계획 자세하게 입력"), detailGoalList: ["운동하기","운동하기"])
 }

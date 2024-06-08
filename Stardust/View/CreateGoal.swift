@@ -51,11 +51,6 @@ struct CreateGoal: View {
             .onAppear{
                 isFocused = true
             }
-            .toolbar {
-                ToolbarItem (placement: .topBarTrailing){
-                    CloseButton()
-                }
-            }
         }
     }
     @ViewBuilder

@@ -20,7 +20,7 @@ struct HomeView: View {
         NavigationStack{
             ZStack{
                 ProverbView()
-                VStack{
+                VStack(){
                     Spacer()
                     ToDoListView()
                         .environmentObject(viewModel)
@@ -36,16 +36,13 @@ struct HomeView: View {
                 }
                 .padding(.horizontal,16)
                 .navigationTitle("")
-                .fullScreenCover(isPresented: $createNewGoal){
-                    CreateGoal()
-                }
             }
         }
     }
     @ViewBuilder
     func createNewGoalButton()-> some View{
-        Button{
-            createNewGoal.toggle()
+        NavigationLink {
+            CreateGoal()
         } label: {
             Circle()
                 .frame(width: 50,height: 50)
