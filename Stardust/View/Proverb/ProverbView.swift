@@ -7,14 +7,12 @@
 import SwiftUI
 
 struct ProverbView: View {
-    let gradient = AngularGradient(colors: [.black, .white], center: .top)
-    
-    @ObservedObject private var proverbViewModel = ProverbViewModel()
+   
+    @StateObject private var proverbViewModel = ProverbViewModel()
     @State private var timer: Timer? = nil
     @State private var proverbIndex: Int = 0
     var body: some View {
         ZStack{
-            gradient.ignoresSafeArea()
             VStack(spacing: 10){
                 Text(proverbViewModel.proverbs[proverbIndex].quote)
                     .frame(maxWidth: .infinity)
@@ -22,7 +20,7 @@ struct ProverbView: View {
                 Text(proverbViewModel.proverbs[proverbIndex].author)
             }
             .foregroundStyle(.white)
-            .font(AppFont.headlineBold)
+            .font(.subheadline)
             .transition(.slide)
             .animation(.easeInOut(duration: 0.5))
             .padding(.horizontal,10)

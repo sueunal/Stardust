@@ -12,11 +12,10 @@ struct GoalDetailView: View {
     @Binding var title: String
     @State var detailGoalText: String = ""
     @State var detailGoalList: [String] = []
-    @State private var isAddAnimation: Bool = false
     @State private var isEmpty: Bool = true
+    @State private var isAddAnimation: Bool = false
     @State private var createGoal: Bool = false
     @State private var isShow: Bool = false
-    @FocusState var foucused
     var body: some View {
         NavigationStack{
             ZStack{
@@ -36,26 +35,27 @@ struct GoalDetailView: View {
                                 detailGoalListButton()
                             }
                     }else{
-                        Rectangle()
+                        Text("최대 5개 까지만 입력 가능해요")
+                            .frame(maxWidth: .infinity)
                             .frame(height: 50)
-                            .foregroundColor(.white)
-                            .overlay{
-                                Text("최대 5개 까지만 입력 가능해요")
-                            }
-                            .animation(.easeInOut(duration: 1) ,value: isShow)
+                            .background(
+                                Rectangle()
+                                    .stroke()
+                                    .frame(height: 50)
+                                    .foregroundColor(.white)
+                            )
+                            .animation(.easeInOut(duration: 1),value: isShow)
                             .onAppear{
                                 isShow.toggle()
                             }
                     }
                     Spacer()
                     addDetailListView()
+                        .animation(.linear(duration: 0.5),value: isShow)
                     Spacer()
                     createStar()
                 }
                 .padding(.horizontal,16)
-                .onAppear{
-                    foucused = true
-                }
             }
             .navigationDestination(isPresented: $createGoal){
                 GoalResultView(title: $title, goalDetail: $detailGoalText, detailGoalList: detailGoalList)
@@ -66,19 +66,34 @@ struct GoalDetailView: View {
     @ViewBuilder
     func addDetailListView()-> some View{
         ScrollView{
-            ForEach(detailGoalList, id:\.self){ item in
-                Rectangle()
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 50)
-                    .foregroundStyle(.white.gradient)
-                    .overlay{
-                        Text(item)
-                            .font(.body)
-                            .foregroundStyle(.black.gradient)
+            ForEach(detailGoalList.indices, id:\.self){ item in
+                HStack{
+                    Spacer()
+                    Text(detailGoalList[item])
+                        .font(.body)
+                        .foregroundStyle(.black.gradient)
+                    Spacer()
+                    Button{
+                        let index = detailGoalList.index(before:  item) + 1
+                        detailGoalList.remove(at: index)
+                    }label: {
+                        Image(systemName: "trash")
+                            .foregroundStyle(.white)
+                            .frame(width: 20,height: 30)
                     }
-                    .animation(.easeInOut(duration: 0.5),value: isAddAnimation)
+                    .padding(.trailing,10)
+                }
+                .frame(maxWidth: .infinity)
+                .frame(height: 50)
+                .background(
+                    RoundedRectangle(cornerRadius: 8)
+                        .fill(.gray.gradient.opacity(0.5))
+                        .strokeBorder(lineWidth: 1)
+                )
+                .animation(.easeInOut(duration: 0.5),value: isAddAnimation)
             }
         }
+        .defaultScrollAnchor(detailGoalList.count <=  5 ? .top : .bottom)
     }
     @ViewBuilder
     func createStar()-> some View{

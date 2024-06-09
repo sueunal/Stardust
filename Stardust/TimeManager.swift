@@ -1,7 +1,7 @@
 import SwiftUI
 import Combine
 
-final class TimerViewModel: ObservableObject {
+final class TimerManager: ObservableObject {
     @Published var remainingTime: String = ""
     private var cancellable: AnyCancellable?
     
@@ -15,7 +15,6 @@ final class TimerViewModel: ObservableObject {
                 self?.updateRemainingTime()
             }
     }
-    
     private func updateRemainingTime() {
         let currentTime = Date()
         let calendar = Calendar.current

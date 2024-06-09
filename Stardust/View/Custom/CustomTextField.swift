@@ -28,6 +28,12 @@ struct CustomTextField: View {
                 .foregroundStyle(.white.gradient)
         )
         .focused($isFocused)
+        .onAppear{
+            isFocused = true
+        }
+        .onDisappear{
+            isFocused = false
+        }
     }
 }
 

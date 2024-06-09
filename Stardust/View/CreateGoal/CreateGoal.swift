@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CreateGoal: View {
     @State private var title: String = ""
-    @FocusState var isFocused: Bool
     let gradient = LinearGradient(colors: [Color.black,Color.black,Color.black,Color.white],
                                   startPoint: .top, endPoint: .bottom)
     var body: some View {
@@ -27,6 +26,7 @@ struct CreateGoal: View {
                     }
                     Spacer()
                     CustomTextField(text: $title, promptText: "목표 제목을 입력해주세요!")
+                    
                     Spacer()
                     nextButton()
                 }
@@ -34,9 +34,6 @@ struct CreateGoal: View {
             }
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
-            .onAppear{
-                isFocused = true
-            }
         }
     }
     @ViewBuilder

@@ -101,11 +101,11 @@
 				2C3E98B52C1328980071C3F7 /* TimeManager.swift */,
 				2C21146E2C075CC20013EBD9 /* Stardust.entitlements */,
 				2CA189A42C087FEF00FACAB6 /* Info.plist */,
+				2CF239B82C14340700224094 /* ViewModel */,
 				2C9E4CAF2C14894800E2FD6C /* Resources */,
 				2CF239B72C1433DD00224094 /* Util */,
 				2CF239B62C1433B900224094 /* Model */,
 				2CF239B52C14337F00224094 /* View */,
-				2CF239B82C14340700224094 /* ViewModel */,
 				2C21146F2C075CC20013EBD9 /* Preview Content */,
 			);
 			path = Stardust;
@@ -117,6 +117,42 @@
 				2C2114702C075CC20013EBD9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2C4682252C159FCC001AAD64 /* ToDo */ = {
+			isa = PBXGroup;
+			children = (
+				2CC6EA802C108897003445C3 /* CheckToDoView.swift */,
+				2C7013CA2C0C482C00ACBFA0 /* ToDoListView.swift */,
+				2C8800B32C0E077300972764 /* ToDoItem.swift */,
+			);
+			path = ToDo;
+			sourceTree = "<group>";
+		};
+		2C4682262C159FE0001AAD64 /* CreateGoal */ = {
+			isa = PBXGroup;
+			children = (
+				2C2114932C0776E30013EBD9 /* CreateGoal.swift */,
+				2CA189BA2C08DF4D00FACAB6 /* GoalDetailView.swift */,
+				2C5522CD2C09B8C900EBBA3C /* GoalResultView.swift */,
+			);
+			path = CreateGoal;
+			sourceTree = "<group>";
+		};
+		2C4682272C15A017001AAD64 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				2C08D2422C143F31004DAEA4 /* CustomTextField.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		2C4682282C15A323001AAD64 /* Proverb */ = {
+			isa = PBXGroup;
+			children = (
+				2CA189BE2C08E4B000FACAB6 /* ProverbView.swift */,
+			);
+			path = Proverb;
 			sourceTree = "<group>";
 		};
 		2C9E4CAF2C14894800E2FD6C /* Resources */ = {
@@ -142,15 +178,11 @@
 			isa = PBXGroup;
 			children = (
 				2C2114682C075CC10013EBD9 /* HomeView.swift */,
-				2C8800B32C0E077300972764 /* ToDoItem.swift */,
-				2C7013CA2C0C482C00ACBFA0 /* ToDoListView.swift */,
-				2C2114932C0776E30013EBD9 /* CreateGoal.swift */,
-				2C08D2422C143F31004DAEA4 /* CustomTextField.swift */,
-				2CC6EA802C108897003445C3 /* CheckToDoView.swift */,
-				2CA189BE2C08E4B000FACAB6 /* ProverbView.swift */,
-				2CA189BA2C08DF4D00FACAB6 /* GoalDetailView.swift */,
-				2C5522CD2C09B8C900EBBA3C /* GoalResultView.swift */,
+				2C4682272C15A017001AAD64 /* Custom */,
+				2C4682262C159FE0001AAD64 /* CreateGoal */,
+				2C4682252C159FCC001AAD64 /* ToDo */,
 				2C229FE92C0B8EC100186D66 /* TimerView.swift */,
+				2C4682282C15A323001AAD64 /* Proverb */,
 			);
 			path = View;
 			sourceTree = "<group>";

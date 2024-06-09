@@ -9,9 +9,7 @@ import SwiftUI
 
 
 struct HomeView: View {
-    let gradient = LinearGradient(colors: [Color.black,Color.black,Color.black,Color.white],
-                                  startPoint: .top, endPoint: .bottom)
-    let graientBackground = AngularGradient(colors: [.black, .white], center: .center)
+    let gradient = AngularGradient(colors: [.black, .white], center: .top)
     @State private var isOnAppear: Bool = false
     @State private var createNewGoal: Bool = false
     @State private var isReady: Bool = false
@@ -19,14 +17,12 @@ struct HomeView: View {
     var body: some View {
         NavigationStack{
             ZStack{
+                gradient.ignoresSafeArea()
                 ProverbView()
                 VStack(){
                     Spacer()
                     ToDoListView()
                         .environmentObject(viewModel)
-                    Text("남은 시간")
-                        .font(AppFont.title2Bold)
-                        .foregroundStyle(.white)
                     TimerView()
                     Spacer()
                         .frame(height: 200)
