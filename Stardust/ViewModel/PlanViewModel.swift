@@ -9,7 +9,9 @@ import SwiftUI
 import Alamofire
 
 struct GoalModel: Codable {
-    let data, message, title: String
+    let title: String
+    let messages: [String]
+    let date: String
 }
 
 class PlanViewModel: ObservableObject{
@@ -19,11 +21,11 @@ class PlanViewModel: ObservableObject{
     init(){
         self.requestGet()
     }
-    func postGoal(_ title: String, _ message: String, _ date: String){
+    func postGoal(_ title: String, _ messages: [String], _ date: String){
         let url = URL(string: localURL)!
         let parameter: Parameters? = [
             "title": title,
-            "message": message,
+            "message": messages,
             "data": date
         ]
         AF.request(url, method: .post, parameters: parameter, encoding: JSONEncoding.default).responseDecodable(of: GoalModel.self){ response in

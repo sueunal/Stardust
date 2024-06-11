@@ -9,9 +9,10 @@ import Foundation
 
 struct Plan: Codable, Identifiable{
     let id: String
-    let title, message: String
-    let data: Int
+    let title: String
+    let messages: [String]
+    let date: Int
     
-    static let dummy = Plan(id: "", title: "", message: "", data: 10)
+    static let dummy = Plan(id: "", title: "", messages: ["",""], date: 10)
 }
 

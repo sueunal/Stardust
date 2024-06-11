@@ -15,6 +15,9 @@
 		2C2114942C0776E30013EBD9 /* CreateGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2114932C0776E30013EBD9 /* CreateGoal.swift */; };
 		2C229FEA2C0B8EC100186D66 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C229FE92C0B8EC100186D66 /* TimerView.swift */; };
 		2C3E98B62C1328980071C3F7 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E98B52C1328980071C3F7 /* TimeManager.swift */; };
+		2C46822A2C15B017001AAD64 /* DetailGoalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4682292C15B017001AAD64 /* DetailGoalItem.swift */; };
+		2C46822C2C15C66F001AAD64 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C46822B2C15C66F001AAD64 /* CustomButton.swift */; };
+		2C49D1252C16B6CB0050213D /* ToDoItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49D1242C16B6CB0050213D /* ToDoItems.swift */; };
 		2C5522CC2C09A22000EBBA3C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5522CB2C09A22000EBBA3C /* Color.swift */; };
 		2C5522CE2C09B8C900EBBA3C /* GoalResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5522CD2C09B8C900EBBA3C /* GoalResultView.swift */; };
 		2C7013CB2C0C482C00ACBFA0 /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7013CA2C0C482C00ACBFA0 /* ToDoListView.swift */; };
@@ -46,6 +49,9 @@
 		2C2114932C0776E30013EBD9 /* CreateGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoal.swift; sourceTree = "<group>"; };
 		2C229FE92C0B8EC100186D66 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		2C3E98B52C1328980071C3F7 /* TimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
+		2C4682292C15B017001AAD64 /* DetailGoalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGoalItem.swift; sourceTree = "<group>"; };
+		2C46822B2C15C66F001AAD64 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		2C49D1242C16B6CB0050213D /* ToDoItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItems.swift; sourceTree = "<group>"; };
 		2C5522CB2C09A22000EBBA3C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2C5522CD2C09B8C900EBBA3C /* GoalResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalResultView.swift; sourceTree = "<group>"; };
 		2C7013CA2C0C482C00ACBFA0 /* ToDoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
@@ -125,6 +131,7 @@
 				2CC6EA802C108897003445C3 /* CheckToDoView.swift */,
 				2C7013CA2C0C482C00ACBFA0 /* ToDoListView.swift */,
 				2C8800B32C0E077300972764 /* ToDoItem.swift */,
+				2C49D1242C16B6CB0050213D /* ToDoItems.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -134,6 +141,7 @@
 			children = (
 				2C2114932C0776E30013EBD9 /* CreateGoal.swift */,
 				2CA189BA2C08DF4D00FACAB6 /* GoalDetailView.swift */,
+				2C4682292C15B017001AAD64 /* DetailGoalItem.swift */,
 				2C5522CD2C09B8C900EBBA3C /* GoalResultView.swift */,
 			);
 			path = CreateGoal;
@@ -143,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				2C08D2422C143F31004DAEA4 /* CustomTextField.swift */,
+				2C46822B2C15C66F001AAD64 /* CustomButton.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -178,10 +187,10 @@
 			isa = PBXGroup;
 			children = (
 				2C2114682C075CC10013EBD9 /* HomeView.swift */,
+				2C229FE92C0B8EC100186D66 /* TimerView.swift */,
 				2C4682272C15A017001AAD64 /* Custom */,
 				2C4682262C159FE0001AAD64 /* CreateGoal */,
 				2C4682252C159FCC001AAD64 /* ToDo */,
-				2C229FE92C0B8EC100186D66 /* TimerView.swift */,
 				2C4682282C15A323001AAD64 /* Proverb */,
 			);
 			path = View;
@@ -298,11 +307,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C5522CE2C09B8C900EBBA3C /* GoalResultView.swift in Sources */,
+				2C46822A2C15B017001AAD64 /* DetailGoalItem.swift in Sources */,
 				2CA189BB2C08DF4D00FACAB6 /* GoalDetailView.swift in Sources */,
 				2C2114692C075CC10013EBD9 /* HomeView.swift in Sources */,
+				2C46822C2C15C66F001AAD64 /* CustomButton.swift in Sources */,
 				2CA189BF2C08E4B000FACAB6 /* ProverbView.swift in Sources */,
 				2C08D2432C143F31004DAEA4 /* CustomTextField.swift in Sources */,
 				2C2114942C0776E30013EBD9 /* CreateGoal.swift in Sources */,
+				2C49D1252C16B6CB0050213D /* ToDoItems.swift in Sources */,
 				2C7013CB2C0C482C00ACBFA0 /* ToDoListView.swift in Sources */,
 				2C229FEA2C0B8EC100186D66 /* TimerView.swift in Sources */,
 				2C2114672C075CC10013EBD9 /* StardustApp.swift in Sources */,
@@ -456,10 +468,11 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -497,10 +510,11 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";

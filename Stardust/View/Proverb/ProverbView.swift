@@ -22,7 +22,7 @@ struct ProverbView: View {
             .foregroundStyle(.white)
             .font(.subheadline)
             .transition(.slide)
-            .animation(.easeInOut(duration: 0.5))
+            .animation(.easeInOut(duration: 0.5), value: proverbIndex)
             .padding(.horizontal,10)
         }
         .onAppear {

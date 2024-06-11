@@ -9,8 +9,7 @@ import SwiftUI
 import Combine
 
 struct TimerView: View {
-    @ObservedObject var timer = TimerManager()
-    
+    @StateObject var timer = TimerManager()
     var body: some View {
         VStack {
             Text("남은 시간")

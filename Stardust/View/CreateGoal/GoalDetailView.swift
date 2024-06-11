@@ -10,6 +10,7 @@ import SwiftUI
 struct GoalDetailView: View {
     let gradiant = AngularGradient(colors: [.background,.white], center: .top)
     @Binding var title: String
+    @State private var warningEffect: CGFloat = 0
     @State var detailGoalText: String = ""
     @State var detailGoalList: [String] = []
     @State private var isEmpty: Bool = true
@@ -19,41 +20,21 @@ struct GoalDetailView: View {
     var body: some View {
         NavigationStack{
             ZStack{
-                gradiant.ignoresSafeArea()
+                Color.black.ignoresSafeArea()
                 VStack{
                     Spacer()
                         .frame(height: 32)
-                    HStack{
-                        Text("\(title) 목표의 자세한 계획을 추가해주세요")
-                            .font(AppFont.title1Bold)
-                            .foregroundStyle(.text)
-                        Spacer()
-                    }
-                    if detailGoalList.count <= 4{
-                        CustomTextField(text: $detailGoalText, promptText: "추가할 계획을 입력해주세요!")
-                            .overlay{
-                                detailGoalListButton()
-                            }
-                    }else{
-                        Text("최대 5개 까지만 입력 가능해요")
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 50)
-                            .background(
-                                Rectangle()
-                                    .stroke()
-                                    .frame(height: 50)
-                                    .foregroundColor(.white)
-                            )
-                            .animation(.easeInOut(duration: 1),value: isShow)
-                            .onAppear{
-                                isShow.toggle()
-                            }
-                    }
+                    titleMessage()
                     Spacer()
+                        .frame(height: 16)
+                    textFieldView()
+                    
                     addDetailListView()
-                        .animation(.linear(duration: 0.5),value: isShow)
                     Spacer()
-                    createStar()
+                    CustomButton(buttonText: "목표 생성하기") {
+                        createGoal.toggle()
+                    }
+                    .disabled(detailGoalList.isEmpty)
                 }
                 .padding(.horizontal,16)
             }
@@ -61,6 +42,40 @@ struct GoalDetailView: View {
                 GoalResultView(title: $title, goalDetail: $detailGoalText, detailGoalList: detailGoalList)
                     .navigationBarBackButtonHidden(true)
             }
+        }
+    }
+    @ViewBuilder
+    func titleMessage()-> some View{
+        HStack{
+            Text("\(title) 목표의 자세한 계획을 추가해주세요")
+                .font(AppFont.title1Bold)
+                .foregroundStyle(.text)
+            Spacer()
+        }
+    }
+    @ViewBuilder
+    func textFieldView()-> some View{
+        if detailGoalList.count <= 4{
+            CustomTextField(text: $detailGoalText, promptText: "추가할 계획을 입력해주세요!")
+                .overlay{
+                    detailGoalListButton()
+                }
+        }else{
+            Text("최대 5개 까지만 입력 가능해요")
+                .frame(maxWidth: .infinity)
+                .frame(height: 50)
+                .foregroundStyle(.yellow.gradient)
+                .background(
+                    Rectangle()
+                        .strokeBorder(lineWidth: 2)
+                        .frame(height: 50)
+                        .foregroundColor(.white)
+                )
+                .warning(warningEffect)
+                .animation(.bouncy,value: isShow)
+                .onAppear{
+                    warningEffect += 1
+                }
         }
     }
     @ViewBuilder
@@ -76,6 +91,7 @@ struct GoalDetailView: View {
                     Button{
                         let index = detailGoalList.index(before:  item) + 1
                         detailGoalList.remove(at: index)
+                        isAddAnimation =  false
                     }label: {
                         Image(systemName: "trash")
                             .foregroundStyle(.white)
@@ -90,30 +106,10 @@ struct GoalDetailView: View {
                         .fill(.gray.gradient.opacity(0.5))
                         .strokeBorder(lineWidth: 1)
                 )
-                .animation(.easeInOut(duration: 0.5),value: isAddAnimation)
+                .animation(.easeIn(duration: 0.5),value: isAddAnimation)
             }
         }
         .defaultScrollAnchor(detailGoalList.count <=  5 ? .top : .bottom)
-    }
-    @ViewBuilder
-    func createStar()-> some View{
-        VStack{
-            Button{
-                createGoal.toggle()
-            }label: {
-                Text("목표 생성하기")
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 50)
-                    .foregroundStyle(.white)
-                    .font(AppFont.title3Bold)
-                    .background(
-                        RoundedRectangle(cornerRadius: 8)
-                            .fill(.dark)
-                    )
-            }
-            .padding(.vertical,16)
-            .disabled(isEmpty)
-        }
     }
     @ViewBuilder
     func detailGoalListButton()-> some View{
@@ -122,7 +118,9 @@ struct GoalDetailView: View {
             Button{
                 detailGoalList.append(detailGoalText)
                 detailGoalText = ""
-                isAddAnimation.toggle()
+                withAnimation {
+                    isAddAnimation.toggle()
+                }
             }label: {
                 Text("추가")
                     .frame(height: 30)
@@ -145,6 +143,28 @@ struct GoalDetailView: View {
         }
     }
 }
+
+extension View {
+    func warning(_ interval: CGFloat) -> some View {
+        self.modifier(WarningEffect(interval))
+            .animation(.easeOut(duration: 0.4), value: interval)
+    }
+}
+
+struct WarningEffect: GeometryEffect {
+    var animatableData: CGFloat
+    var amount: CGFloat = 6
+    var shakeCount = 6
+    
+    init(_ interval: CGFloat) {
+        self.animatableData = interval
+    }
+    
+    func effectValue(size: CGSize) -> ProjectionTransform {
+        ProjectionTransform(CGAffineTransform(translationX: amount * sin(animatableData * CGFloat(shakeCount) * .pi), y: 0))
+    }
+}
+
 
 #Preview {
     GoalDetailView(title:.constant("운동하기"))

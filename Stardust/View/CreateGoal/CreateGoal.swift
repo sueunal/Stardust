@@ -14,26 +14,28 @@ struct CreateGoal: View {
     var body: some View {
         NavigationStack{
             ZStack{
-                gradient.ignoresSafeArea()
+                Color.black.ignoresSafeArea()
                 VStack{
                     Spacer()
                         .frame(height: 100)
-                    HStack(spacing: 0){
-                        Text("오늘의 목표 제목을 입력해 주세요!")
-                            .font(AppFont.title1Bold)
-                            .foregroundStyle(.white)
-                        Spacer()
-                    }
+                    titleMessage()
                     Spacer()
                     CustomTextField(text: $title, promptText: "목표 제목을 입력해주세요!")
-                    
                     Spacer()
                     nextButton()
                 }
                 .padding(.horizontal,16)
             }
             .navigationTitle("")
-            .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+    @ViewBuilder
+    func titleMessage()-> some View{
+        HStack(spacing: 0){
+            Text("오늘의 목표 제목을 입력해 주세요!")
+                .font(AppFont.title1Bold)
+                .foregroundStyle(.white)
+            Spacer()
         }
     }
     @ViewBuilder

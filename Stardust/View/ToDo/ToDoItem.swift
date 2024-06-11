@@ -10,10 +10,11 @@ import SwiftUI
 struct ToDoItem: View {
     @EnvironmentObject var viewModel: PlanViewModel
     let gardient = AngularGradient(colors: [.black, .white], center: .top)
+    
     var body: some View {
         NavigationStack{
             ZStack{
-                gardient.opacity(0.8).ignoresSafeArea()
+                Color.black.ignoresSafeArea()
                 VStack{
                     ScrollView{
                         Text("총 \(viewModel.plans.count) 개!")
@@ -22,42 +23,18 @@ struct ToDoItem: View {
                             .foregroundStyle(.white)
                         ForEach(viewModel.plans) { plan in
                             NavigationLink{
-                                CheckToDoView(title: plan.title, message: plan.message)
+                                CheckToDoView(title: plan.title, messages: plan.messages)
                             }label: {
-                                Text("\(plan.title)")
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .frame(height: 100, alignment: .top)
-                                    .font(AppFont.title1Bold)
-                                    .foregroundStyle(.white)
-                                    .overlay{
-                                        VStack{
-                                            Text("\(dataToString(plan.data))")
-                                                .frame(maxWidth: .infinity, alignment: .trailing)
-                                                .foregroundStyle(.white.opacity(0.4))
-                                                .font(AppFont.bodyRegular)
-                                                .padding(.horizontal,10)
-                                            Spacer()
-                                        }
-                                    }
-                                    .padding([.top,.leading], 10)
-                                    .background(
-                                        RoundedRectangle(cornerRadius: 8)
-                                            .fill(.white.opacity(0.3))
-                                            .overlay{
-                                                Text(plan.message)
-                                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                                    .foregroundStyle(.white)
-                                                    .font(AppFont.bodyBold)
-                                                    .padding(.horizontal, 10)
-                                            }
-                                    )
+                                ToDoItems(title: plan.title, messages: plan.messages, date: "2024:11:12")
                             }
+                            Spacer()
+                                .frame(height: 10)
                         }
                     }
-                }
-                .padding(.horizontal,16)
-                .onAppear{
-                    viewModel.requestGet()
+                    .padding(.horizontal,16)
+                    .onAppear{
+                        viewModel.requestGet()
+                    }
                 }
             }
         }

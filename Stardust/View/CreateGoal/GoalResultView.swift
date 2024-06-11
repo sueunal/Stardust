@@ -11,7 +11,7 @@ struct GoalResultView: View {
     var body: some View {
         NavigationStack{
             ZStack{
-                gradient.ignoresSafeArea()
+                Color.black.ignoresSafeArea()
                 VStack{
                     Spacer()
                     TimerView()
@@ -21,7 +21,9 @@ struct GoalResultView: View {
                     Spacer()
                     resultPlanView()
                     Spacer()
-                    completeButton()
+                    CustomButton(buttonText: "확인"){
+                        showHomeView.toggle()
+                    }
                 }
                 .padding(.horizontal,16)
                 .onAppear{
@@ -46,23 +48,6 @@ struct GoalResultView: View {
                 .font(AppFont.bodyRegular)
                 .foregroundStyle(.white)
         }
-    }
-    @ViewBuilder
-    func completeButton()-> some View{
-        Button{
-            showHomeView.toggle()
-        }label: {
-            Text("확인")
-                .frame(maxWidth: .infinity)
-                .frame(height: 50)
-                .foregroundStyle(.white)
-                .background(
-                    RoundedRectangle(cornerRadius: 8)
-                        .fill(Color.background.opacity(0.8))
-                )
-                .shadow(radius: 1,y: 2)
-        }
-        .padding(.vertical,16)
     }
 }
 
