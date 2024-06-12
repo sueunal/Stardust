@@ -5,6 +5,7 @@
 //  Created by sueun kim on 5/31/24.
 //
 import SwiftUI
+import AnimateText
 
 struct ProverbView: View {
    

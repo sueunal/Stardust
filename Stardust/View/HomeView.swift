@@ -17,7 +17,7 @@ struct HomeView: View {
     var body: some View {
         NavigationStack{
             ZStack{
-                Color.black.ignoresSafeArea()
+                BackgroundView()
                 ProverbView()
                 VStack(){
                     Spacer()
