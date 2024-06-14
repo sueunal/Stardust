@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct GoalDetailView: View {
-    let gradiant = AngularGradient(colors: [.background,.white], center: .top)
     @Binding var title: String
     @State private var warningEffect: CGFloat = 0
     @State var detailGoalText: String = ""
@@ -20,13 +19,13 @@ struct GoalDetailView: View {
     var body: some View {
         NavigationStack{
             ZStack{
-                Color.black.ignoresSafeArea()
+                BackgroundView()
                 VStack{
                     Spacer()
                         .frame(height: 32)
                     titleMessage()
                     Spacer()
-                        .frame(height: 16)
+                        .frame(height: 32)
                     textFieldView()
                     
                     addDetailListView()
@@ -49,7 +48,7 @@ struct GoalDetailView: View {
         HStack{
             Text("\(title) 목표의 자세한 계획을 추가해주세요")
                 .font(AppFont.title1Bold)
-                .foregroundStyle(.text)
+                .foregroundStyle(.white)
             Spacer()
         }
     }
@@ -103,8 +102,10 @@ struct GoalDetailView: View {
                 .frame(height: 50)
                 .background(
                     RoundedRectangle(cornerRadius: 8)
-                        .fill(.gray.gradient.opacity(0.5))
+                        .fill(.white.gradient.opacity(0.4))
                         .strokeBorder(lineWidth: 1)
+                        .foregroundStyle(.cyan)
+                    
                 )
                 .animation(.easeIn(duration: 0.5),value: isAddAnimation)
             }

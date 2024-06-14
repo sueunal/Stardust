@@ -16,18 +16,18 @@ struct BackgroundView: View {
                 .overlay{
                     Circle()
                         .fill(topGradient)
-                        .scaleEffect(isOnAppear ? 2 : 0.2)
+                        .scaleEffect(isOnAppear ? 3 : 0.2)
                         .frame(width: 300,height: 300)
                         .animation(.easeInOut(duration: 0.5), value:  isOnAppear)
                         .offset(y: isOnAppear ? -200 : 0)
-                        .overlay{
-                            Circle()
-                                .fill(.mint.opacity(0.1))
-                                .frame(width: 300,height: 300)
-                                .scaleEffect(isOnAppear ? 1.5 : 0.5)
-                                .animation(.easeInOut(duration: 0.5), value:  isOnAppear)
-                                .offset(y: isOnAppear ? 200 : 0)
-                        }
+//                        .overlay{
+//                            Circle()
+//                                .fill(.mint.opacity(0.1))
+//                                .frame(width: 400,height: 400)
+//                                .transition(.move(edge: .bottom))
+//                                .animation(.easeInOut(duration: 0.5), value:  isOnAppear)
+//                                .offset(y: isOnAppear ? 200 : 0)
+//                        }
                 }
         }
         .ignoresSafeArea()

@@ -14,7 +14,7 @@ struct CreateGoal: View {
     var body: some View {
         NavigationStack{
             ZStack{
-                Color.black.ignoresSafeArea()
+                BackgroundView()
                 VStack{
                     Spacer()
                         .frame(height: 100)
@@ -33,7 +33,9 @@ struct CreateGoal: View {
     func titleMessage()-> some View{
         HStack(spacing: 0){
             Text("오늘의 목표 제목을 입력해 주세요!")
-                .font(AppFont.title1Bold)
+                .font(.system(size: 32))
+                .font(.headline)
+                .bold()
                 .foregroundStyle(.white)
             Spacer()
         }

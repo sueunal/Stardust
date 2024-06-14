@@ -9,8 +9,6 @@ import SwiftUI
 
 
 struct HomeView: View {
-    let gradient = AngularGradient(colors: [.black, .white], center: .top)
-    @State private var isOnAppear: Bool = false
     @State private var createNewGoal: Bool = false
     @State private var isReady: Bool = false
     @StateObject var viewModel: PlanViewModel = PlanViewModel()
