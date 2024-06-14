@@ -20,14 +20,6 @@ struct BackgroundView: View {
                         .frame(width: 300,height: 300)
                         .animation(.easeInOut(duration: 0.5), value:  isOnAppear)
                         .offset(y: isOnAppear ? -200 : 0)
-//                        .overlay{
-//                            Circle()
-//                                .fill(.mint.opacity(0.1))
-//                                .frame(width: 400,height: 400)
-//                                .transition(.move(edge: .bottom))
-//                                .animation(.easeInOut(duration: 0.5), value:  isOnAppear)
-//                                .offset(y: isOnAppear ? 200 : 0)
-//                        }
                 }
         }
         .ignoresSafeArea()
