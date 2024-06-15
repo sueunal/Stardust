@@ -8,26 +8,28 @@
 import SwiftUI
 
 struct TimerView: View {
-    @StateObject var timer = TimerManager()
+    @StateObject var timeManager: TimeManager = TimeManager()
     @State var isTimerState: Bool = false
     @State private var timerAnimationColor: [Color] = [.accentColor,.green,.orange]
     
     @State var userInfo: Any? = nil
     var body: some View {
         VStack {
-            Text("남은 시간")
-                .font(AppFont.title1Bold)
-                .foregroundStyle(.white)
-            Spacer()
-                .frame(height: 30)
-            Text("\(timer.remainingTime)")
+            if isTimerState{
+                Text("남은 시간")
+                    .font(AppFont.title1Bold)
+                    .foregroundStyle(.white)
+                    .opacity(isTimerState ? 1 : 0)
+                    .padding(.bottom, -15)
+            }
+            Text("\(timeManager.remainingTime)")
                 .font(.system(size: 80))
                 .foregroundStyle(.white.opacity(0.8).gradient)
-                .padding(EdgeInsets(top: -30, leading:15, bottom: 15, trailing: 15))
-                .animation(.linear(duration: 2),value:  isTimerState)
+                .opacity(isTimerState ? 1 : 0)
+                .padding(15)
         }
         .onAppear{
-            withAnimation{
+            withAnimation(.easeInOut(duration: 2)){
                 isTimerState = true
             }
         }

@@ -17,6 +17,7 @@ struct ProverbView: View {
             VStack(spacing: 10){
                 Text(proverbViewModel.proverbs[proverbIndex].quote)
                     .font(AppFont.title3Regular)
+                    .frame(height: 50)
                 Rectangle()
                     .frame(width: 15,height: 1)
                 Text(proverbViewModel.proverbs[proverbIndex].author)

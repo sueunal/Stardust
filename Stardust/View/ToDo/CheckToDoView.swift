@@ -13,8 +13,9 @@ struct CheckToDoView: View {
     let messages: [String]
     var body: some View {
         ZStack{
-            Color.black.ignoresSafeArea()
+            BackgroundView()
             VStack{
+                Spacer()
                 Text(title)
                     .foregroundStyle(.white)
                     .font(AppFont.title1Bold)
@@ -28,7 +29,9 @@ struct CheckToDoView: View {
                     }
                     .frame(maxWidth: .infinity)
                 }
+                Spacer()
             }
+            .padding(.horizontal,10)
         }
     }
 }

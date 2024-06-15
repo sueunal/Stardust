@@ -1,8 +1,8 @@
 import SwiftUI
 import Combine
 
-final class TimerManager: ObservableObject {
-    @Published var remainingTime: String = ""
+final class TimeManager: ObservableObject {
+    @Published var remainingTime: String = "00:00:00"
     private var cancellable: AnyCancellable?
     
     init() {

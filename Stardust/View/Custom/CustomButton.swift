@@ -14,7 +14,7 @@ struct CustomButton: View {
         Button(action: {
             action()
         }){
-            Text("목표 생성하기")
+            Text(buttonText)
                 .frame(maxWidth: .infinity)
                 .frame(height: 50)
                 .foregroundStyle(.white)
@@ -29,7 +29,7 @@ struct CustomButton: View {
 }
 
 #Preview {
-    CustomButton(buttonText: ""){
+    CustomButton(buttonText: "목표 생성하기"){
         
     }
 }

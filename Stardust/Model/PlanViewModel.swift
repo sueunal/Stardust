@@ -13,32 +13,36 @@ struct GoalModel: Codable {
     let messages: [String]
     let date: String
 }
+struct ResponseModel: Codable{
+    let message: String
+    let ID: String
+}
 
 class PlanViewModel: ObservableObject{
     @Published var plans: [Plan] = []
-    let localURL: String = "http://localhost:5000/api/data"
-    let urlString: String = "https://665701489f970b3b36c78bd9.mockapi.io/plan"
+    let localURL: String = "http://localhost:12341"
     init(){
-        self.requestGet()
+        
     }
-    func postGoal(_ title: String, _ messages: [String], _ date: String){
-        let url = URL(string: localURL)!
+    func addPlan(_ title: String, _ messages: [String], _ date: String){
+        let url = "\(localURL)/add_plan"
         let parameter: Parameters? = [
-            "title": title,
-            "message": messages,
-            "data": date
+            "PlanTitle": title,
+            "PlanDetail": messages,
+            "PlanAttainment": [false],
+            "Date": date
         ]
-        AF.request(url, method: .post, parameters: parameter, encoding: JSONEncoding.default).responseDecodable(of: GoalModel.self){ response in
+        AF.request(url, method: .post, parameters: parameter, encoding: JSONEncoding.default).responseDecodable(of: ResponseModel.self){ response in
             switch response.result{
             case .success(let data):
-                print(data)
+                print(data.ID)
             case .failure(let fail):
                 print(fail.localizedDescription)
             }
         }
     }
     func requestGet(){
-        let url = URL(string: urlString)!
+        let url = "\(localURL)/get_plan"
         AF.request(url, method: .get).responseDecodable(of: [Plan].self) { response in
             switch response.result{
             case .success(let success):

@@ -7,12 +7,12 @@ struct GoalResultView: View {
     @State private var isOnAppear: Bool = false
     @Binding var title: String
     @Binding var goalDetail: String
+    @StateObject var viewModel: PlanViewModel = PlanViewModel()
     let detailGoalList: [String]
     var body: some View {
         NavigationStack{
             ZStack{
                 BackgroundView()
-                ResultPlanView(title: title, detailGoalList: detailGoalList)
                 VStack{
                     Spacer()
                     TimerView()
@@ -20,9 +20,10 @@ struct GoalResultView: View {
                         .frame(height: 16)
                     ProverbView()
                     Spacer()
-                    //                    resultPlanView()
+                    //                    ResultPlanView(title: title, detailGoalList: detailGoalList)
                     Spacer()
                     CustomButton(buttonText: "확인"){
+                        viewModel.addPlan(title, detailGoalList, transferToDate())
                         showHomeView.toggle()
                     }
                 }
@@ -37,6 +38,13 @@ struct GoalResultView: View {
             }
         }
     }
+    func transferToDate()-> String{
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+
+        return dateFormatter.string(from: date)
+    }
 }
 
 struct ResultPlanView: View {
@@ -46,33 +54,32 @@ struct ResultPlanView: View {
     let detailGoalList: [String]
     var body: some View {
         ZStack{
-            RoundedRectangle(cornerRadius: 8)
-                .fill(.white.opacity(0.2).gradient)
-            VStack(alignment: .center){
+            VStack(alignment: .leading, spacing: 0){
                 Spacer()
                     .frame(height: 32)
                 Text("\(title)")
-                    .font(AppFont.title1Bold)
+                    .font(AppFont.largeTitleBold)
                     .foregroundStyle(.white)
+                Rectangle()
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 2)
+                    .foregroundStyle(.white)
+                    .padding(.horizontal,10)
                 ForEach(detailGoalList, id: \.self){ detail in
                     Text("\(detail)")
-                        .frame(maxWidth: .infinity, alignment: .center)
-                        .font(AppFont.bodyRegular)
+                        .foregroundStyle(.white)
+                        .font(AppFont.calloutBold)
                 }
-                Spacer()
             }
+            .padding(.horizontal,10)
+            .background(
+                Rectangle()
+                    .fill(.brown.gradient.opacity(0.8))
+                
+            )
         }
         .frame(maxHeight: 300)
-        .offset(x: 0 ,y: isOnAppaer ? 200 : -100)
         .padding(.horizontal,10)
-        .onAppear{
-            withAnimation (.easeInOut(duration: 2)){
-                isOnAppaer = true
-            }
-        }
-        .onDisappear{
-            isOnAppaer = false
-        }
     }
 }
 

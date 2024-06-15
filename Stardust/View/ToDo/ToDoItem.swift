@@ -14,7 +14,7 @@ struct ToDoItem: View {
     var body: some View {
         NavigationStack{
             ZStack{
-                Color.black.ignoresSafeArea()
+                BackgroundView()
                 VStack{
                     ScrollView{
                         Text("총 \(viewModel.plans.count) 개!")
