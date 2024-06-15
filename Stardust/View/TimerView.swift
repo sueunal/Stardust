@@ -10,28 +10,24 @@ import SwiftUI
 struct TimerView: View {
     @StateObject var timer = TimerManager()
     @State var isTimerState: Bool = false
-    @State private var cheerUpMessage: String = "오늘도 한 걸음 나아갈 당신을 응원할게요!"
     @State private var timerAnimationColor: [Color] = [.accentColor,.green,.orange]
     
     @State var userInfo: Any? = nil
     var body: some View {
         VStack {
             Text("남은 시간")
-                .font(AppFont.title2Bold)
+                .font(AppFont.title1Bold)
                 .foregroundStyle(.white)
+            Spacer()
+                .frame(height: 30)
             Text("\(timer.remainingTime)")
                 .font(.system(size: 80))
                 .foregroundStyle(.white.opacity(0.8).gradient)
-                .scaleEffect(isTimerState ? 1 : 0.5)
-                .padding()
-            Text(cheerUpMessage)
-                .font(AppFont.bodyBold)
-                .foregroundStyle(.white)
-                .transition(.identity)
-                .animation(.easeInOut(duration: 0.5), value: isTimerState)
+                .padding(EdgeInsets(top: -30, leading:15, bottom: 15, trailing: 15))
+                .animation(.linear(duration: 2),value:  isTimerState)
         }
         .onAppear{
-            withAnimation(.easeIn(duration: 2)){
+            withAnimation{
                 isTimerState = true
             }
         }

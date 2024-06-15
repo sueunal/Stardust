@@ -63,7 +63,7 @@ struct GoalDetailView: View {
             Text("최대 5개 까지만 입력 가능해요")
                 .frame(maxWidth: .infinity)
                 .frame(height: 50)
-                .foregroundStyle(.yellow.gradient)
+                .foregroundStyle(.white)
                 .background(
                     Rectangle()
                         .strokeBorder(lineWidth: 2)
@@ -102,10 +102,7 @@ struct GoalDetailView: View {
                 .frame(height: 50)
                 .background(
                     RoundedRectangle(cornerRadius: 8)
-                        .fill(.white.gradient.opacity(0.4))
-                        .strokeBorder(lineWidth: 1)
-                        .foregroundStyle(.cyan)
-                    
+                        .stroke()
                 )
                 .animation(.easeIn(duration: 0.5),value: isAddAnimation)
             }
