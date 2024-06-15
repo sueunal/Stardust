@@ -16,15 +16,18 @@ struct ProverbView: View {
         ZStack{
             VStack(spacing: 10){
                 Text(proverbViewModel.proverbs[proverbIndex].quote)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 50)
+                    .font(AppFont.title3Regular)
+                Rectangle()
+                    .frame(width: 15,height: 1)
                 Text(proverbViewModel.proverbs[proverbIndex].author)
+                    .font(.subheadline)
             }
-            .foregroundStyle(.white)
-            .font(.subheadline)
+            .frame(maxWidth: .infinity)
+            .foregroundStyle(.white.gradient)
+            .bold()
             .transition(.slide)
             .animation(.easeInOut(duration: 0.5), value: proverbIndex)
-            .padding(.horizontal,10)
+            .padding(20)
         }
         .onAppear {
             startTimer()

@@ -4,26 +4,25 @@
 //
 //  Created by sueun kim on 5/29/24.
 //
-
 import SwiftUI
 
 
 struct HomeView: View {
     @State private var createNewGoal: Bool = false
-    @State private var isReady: Bool = false
+    @State private var cheerUpMessage: String = "오늘도 한 걸음 나아갈 당신을 응원할게요!"
     @StateObject var viewModel: PlanViewModel = PlanViewModel()
     var body: some View {
         NavigationStack{
             ZStack{
                 BackgroundView()
-                ProverbView()
                 VStack(){
                     Spacer()
                     ToDoListView()
                         .environmentObject(viewModel)
                     TimerView()
+                    ProverbView()
                     Spacer()
-                        .frame(height: 200)
+                        .frame(height: 150)
                     createNewGoalButton()
                     Spacer()
                         .frame(height: 200)
