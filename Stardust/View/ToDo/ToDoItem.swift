@@ -21,16 +21,18 @@ struct ToDoItem: View {
                             .frame(maxWidth: .infinity,alignment: .leading)
                             .font(AppFont.title1Bold)
                             .foregroundStyle(.white)
-                        ForEach(viewModel.plans) { plan in
+//                        ForEach(viewModel.plans) { plan in
+                        if let ToDo = viewModel.ToDo{
                             NavigationLink{
-                                CheckToDoView(title: plan.title, messages: plan.messages)
+                                CheckToDoView(title: ToDo.PlanTitle, messages: ToDo.PlanDetail)
                             }label: {
-                                ToDoItems(title: plan.title, messages: plan.messages, date: "2024:11:12")
+                                ToDoItems(title: ToDo.PlanTitle, messages: ToDo.PlanDetail, date: ToDo.Date)
                             }
+                        }
                             Spacer()
                                 .frame(height: 10)
                         }
-                    }
+//                    }
                     .padding(.horizontal,16)
                     .onAppear{
                         viewModel.requestGet()

@@ -204,7 +204,6 @@
 		2CF239B62C1433B900224094 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2CF3F5362C0F55DC0026ACA3 /* PlanViewModel.swift */,
 				2CF3F5342C0F55750026ACA3 /* GoalPlan.swift */,
 				2C9E4CAB2C147F8A00E2FD6C /* ProverbModel.swift */,
 			);
@@ -226,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				2C9E4CAD2C14817900E2FD6C /* ProverbViewModel.swift */,
+				2CF3F5362C0F55DC0026ACA3 /* PlanViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
