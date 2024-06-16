@@ -24,9 +24,10 @@ struct ResponseModel: Codable{
     let id: String
 }
 
-class PlanViewModel: ObservableObject, SetGoal{
-    @Published var plans: [Plan] = []
-    @Published var ToDo: [RequestModel] = []
+@Observable
+class PlanViewModel: SetGoal{
+    var plans: [Plan] = []
+    var ToDo: [RequestModel] = []
     let localURL: String = "http://localhost:12341"
     init(){
         if let planId = UserDefaults.standard.string(forKey: "planID"){
