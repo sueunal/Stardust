@@ -10,15 +10,14 @@ import SwiftUI
 struct HomeView: View {
     @State private var createNewGoal: Bool = false
     @State private var cheerUpMessage: String = "오늘도 한 걸음 나아갈 당신을 응원할게요!"
-    @StateObject var viewModel: PlanViewModel = PlanViewModel()
+    @State var viewModel: PlanViewModel = PlanViewModel()
     var body: some View {
         NavigationStack{
             ZStack{
                 BackgroundView()
                 VStack(){
                     Spacer()
-                    ToDoListView()
-                        .environmentObject(viewModel)
+                    ToDoListView(viewModel: viewModel)
                     TimerView()
                     ProverbView()
                     Spacer()

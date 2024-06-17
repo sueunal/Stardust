@@ -7,7 +7,7 @@ struct GoalResultView: View {
     @State private var isOnAppear: Bool = false
     @Binding var title: String
     @Binding var goalDetail: String
-    @StateObject var viewModel: PlanViewModel = PlanViewModel()
+     var viewModel: PlanViewModel = PlanViewModel()
     let detailGoalList: [String]
     var body: some View {
         NavigationStack{
