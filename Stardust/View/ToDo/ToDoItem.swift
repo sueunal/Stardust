@@ -21,7 +21,7 @@ struct ToDoItem: View {
                             .frame(maxWidth: .infinity,alignment: .leading)
                             .font(AppFont.title1Bold)
                             .foregroundStyle(.white)
-                        ForEach(viewModel.ToDo, id:\.id) { toDo in
+                        ForEach(viewModel.toDo, id:\.id) { toDo in
                             NavigationLink{
                                 CheckToDoView(title: toDo.PlanTitle, messages: toDo.PlanDetail)
                             }label: {

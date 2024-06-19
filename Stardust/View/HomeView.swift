@@ -9,25 +9,31 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var createNewGoal: Bool = false
-    @State private var cheerUpMessage: String = "오늘도 한 걸음 나아갈 당신을 응원할게요!"
     @State var viewModel: PlanViewModel = PlanViewModel()
     var body: some View {
         NavigationStack{
             ZStack{
-                BackgroundView()
-                VStack(){
-                    Spacer()
-                    ToDoListView(viewModel: viewModel)
-                    TimerView()
-                    ProverbView()
-                    Spacer()
-                        .frame(height: 150)
-                    createNewGoalButton()
-                    Spacer()
-                        .frame(height: 200)
+                if viewModel.errorMessage.isEmpty{
+                    BackgroundView()
+                    VStack(){
+                        Spacer()
+                        ToDoListView(viewModel: viewModel)
+                        TimerView()
+                        ProverbView()
+                        Spacer()
+                            .frame(height: 150)
+                        createNewGoalButton()
+                        Spacer()
+                            .frame(height: 200)
+                    }
+                    .padding(.horizontal,16)
+                    .navigationTitle("")
+                }else{
+                    Color.black.ignoresSafeArea()
+                    Text(viewModel.errorMessage)
+                        .foregroundStyle(.white)
+                        .font(.largeTitle)
                 }
-                .padding(.horizontal,16)
-                .navigationTitle("")
             }
         }
     }
