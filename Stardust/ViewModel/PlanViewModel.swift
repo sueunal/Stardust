@@ -24,11 +24,19 @@ protocol SetGoal{
 struct ResponseModel: Codable{
     let id: String
 }
+enum Network{
+    case success
+    case fail(NetworkError)
+}
+enum NetworkError: String ,Error{
+    case couldNotConnectServer = "서버에 연결할 수 없습니다.\n네트워크 연결을 확인해주세요"
+}
 
 @Observable
-class PlanViewModel: SetGoal{
+class PlanViewModel{
     var plans: [Plan] = []
-    var ToDo: [RequestModel] = []
+    var toDo: [RequestModel] = []
+    var errorMessage: String = ""
     let localURL: String = "http://localhost:12341"
     init(){
         if let planId = UserDefaults.standard.string(forKey: "planID"){
@@ -37,7 +45,7 @@ class PlanViewModel: SetGoal{
             self.createPlanId()
         }
     }
-    func createPlanId(){
+    func createPlanId() {
         let url = "\(localURL)/create"
         AF.request(url,method: .post).responseDecodable(of: ResponseModel.self) { response in
             switch response.result{
@@ -45,6 +53,7 @@ class PlanViewModel: SetGoal{
                 print("table id : \(data.id)")
                 self.saveId(data.id)
             case .failure(let createError):
+                self.errorMessage = createError.localizedDescription
                 print("\(createError.localizedDescription)")
             }
         }
@@ -71,20 +80,20 @@ class PlanViewModel: SetGoal{
     }
     func requestPlans(){
         guard let planID = UserDefaults.standard.string(forKey: "planID") else{
-           return
+            return
         }
         let url = "\(localURL)/get/\(planID)"
         AF.request(url, method: .get).responseDecodable(of: [RequestModel].self) { response in
             switch response.result{
             case .success(let success):
-                self.ToDo = success
+                self.toDo = success
             case .failure(let fail):
                 print(fail.localizedDescription)
             }
         }
     }
     func saveId(_ saveIdString: String){
-       UserDefaults.standard.setValue(saveIdString, forKey: "planID")
+        UserDefaults.standard.setValue(saveIdString, forKey: "planID")
     }
     func clearUserDefaults() {
         let defaults = UserDefaults.standard
