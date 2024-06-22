@@ -14,6 +14,8 @@
 		2C2114712C075CC20013EBD9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C2114702C075CC20013EBD9 /* Preview Assets.xcassets */; };
 		2C2114942C0776E30013EBD9 /* CreateGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2114932C0776E30013EBD9 /* CreateGoal.swift */; };
 		2C229FEA2C0B8EC100186D66 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C229FE92C0B8EC100186D66 /* TimerView.swift */; };
+		2C3AB4152C246F8900772675 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3AB4142C246F8900772675 /* Response.swift */; };
+		2C3AB4172C246FC200772675 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3AB4162C246FC200772675 /* Request.swift */; };
 		2C3E98B62C1328980071C3F7 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E98B52C1328980071C3F7 /* TimeManager.swift */; };
 		2C46822A2C15B017001AAD64 /* DetailGoalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4682292C15B017001AAD64 /* DetailGoalItem.swift */; };
 		2C46822C2C15C66F001AAD64 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C46822B2C15C66F001AAD64 /* CustomButton.swift */; };
@@ -50,6 +52,8 @@
 		2C2114702C075CC20013EBD9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2C2114932C0776E30013EBD9 /* CreateGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoal.swift; sourceTree = "<group>"; };
 		2C229FE92C0B8EC100186D66 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		2C3AB4142C246F8900772675 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		2C3AB4162C246FC200772675 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		2C3E98B52C1328980071C3F7 /* TimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
 		2C4682292C15B017001AAD64 /* DetailGoalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGoalItem.swift; sourceTree = "<group>"; };
 		2C46822B2C15C66F001AAD64 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -206,6 +210,8 @@
 			children = (
 				2CF3F5342C0F55750026ACA3 /* GoalPlan.swift */,
 				2C9E4CAB2C147F8A00E2FD6C /* ProverbModel.swift */,
+				2C3AB4162C246FC200772675 /* Request.swift */,
+				2C3AB4142C246F8900772675 /* Response.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C5522CE2C09B8C900EBBA3C /* GoalResultView.swift in Sources */,
+				2C3AB4172C246FC200772675 /* Request.swift in Sources */,
 				2C46822A2C15B017001AAD64 /* DetailGoalItem.swift in Sources */,
 				2C51C2962C19CC1B00F3020D /* BackgroundView.swift in Sources */,
 				2CA189BB2C08DF4D00FACAB6 /* GoalDetailView.swift in Sources */,
@@ -333,6 +340,7 @@
 				2C9E4CAE2C14817900E2FD6C /* ProverbViewModel.swift in Sources */,
 				2CC6EA812C108897003445C3 /* CheckToDoView.swift in Sources */,
 				2C5522CC2C09A22000EBBA3C /* Color.swift in Sources */,
+				2C3AB4152C246F8900772675 /* Response.swift in Sources */,
 				2CF3F5372C0F55DC0026ACA3 /* PlanViewModel.swift in Sources */,
 				2C3E98B62C1328980071C3F7 /* TimeManager.swift in Sources */,
 			);

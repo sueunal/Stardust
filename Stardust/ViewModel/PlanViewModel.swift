@@ -8,28 +8,37 @@ import SwiftUI
 import Observation
 import Alamofire
 
-struct RequestModel: Codable,Identifiable {
-    let id = UUID()
-    let PlanTitle: String
-    let PlanDetail: [String]
-    let PlanAttainment: [Bool]
-    let Date: String
-}
+
 protocol SetGoal{
     func createPlanId()
     func requestPlans()
     func addPlan(_ title: String, _ messages: [String], _ date: String)
 }
 
-struct ResponseModel: Codable{
-    let id: String
-}
+
 enum Network{
     case success
     case fail(NetworkError)
 }
 enum NetworkError: String ,Error{
     case couldNotConnectServer = "서버에 연결할 수 없습니다.\n네트워크 연결을 확인해주세요"
+}
+class NetworkManger{
+    let endPoint: String = "https://picsum.photos/200"
+    
+    func connectToServer(){
+        guard let url = URL(string: endPoint) else{
+            return
+        }
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data,
+                  let response = response as? HTTPURLResponse,
+                  response.statusCode >= 200 && response.statusCode < 300 else{
+                    return
+            }
+        }
+        .resume()
+    }
 }
 
 @Observable
@@ -38,12 +47,14 @@ class PlanViewModel{
     var toDo: [RequestModel] = []
     var errorMessage: String = ""
     let localURL: String = "http://localhost:12341"
+    let networkManager = NetworkManger()
     init(){
-        if let planId = UserDefaults.standard.string(forKey: "planID"){
-            return
-        }else{
-            self.createPlanId()
-        }
+        networkManager.connectToServer()
+//        if let planId = UserDefaults.standard.string(forKey: "planID"){
+//            return
+//        }else{
+//            self.createPlanId()
+//        }
     }
     func createPlanId() {
         let url = "\(localURL)/create"
