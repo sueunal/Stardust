@@ -22,8 +22,12 @@ struct TimerView: View {
                     .opacity(isTimerState ? 1 : 0)
                     .padding(.bottom, -15)
             }
+            
+            Spacer()
+                .frame(height: 5)
             Text("\(timeManager.remainingTime)")
                 .font(.system(size: 80))
+                .frame(height: 100)
                 .foregroundStyle(.white.opacity(0.8).gradient)
                 .opacity(isTimerState ? 1 : 0)
                 .padding(15)

@@ -48,8 +48,7 @@ struct HomeView: View {
                 .blur(radius: 1)
                 .font(AppFont.bodyBold)
                 .overlay{
-                    Image(systemName: "plus")
-                        .resizable()
+                    Text("➕")
                         .frame(width: 25,height: 25)
                         .foregroundStyle(.black)
                 }

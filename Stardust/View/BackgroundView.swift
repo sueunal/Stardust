@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BackgroundView: View {
-    let topGradient = LinearGradient(colors: [.background.opacity(0.3), .accentColor.opacity(0.5)], startPoint: .top, endPoint: .bottomTrailing)
+    let topGradient = LinearGradient(colors: [.purple.opacity(0.5), .accentColor.opacity(0.5)], startPoint: .top, endPoint: .bottomTrailing)
     @State private var isOnAppear: Bool = false
     var body: some View {
         VStack{

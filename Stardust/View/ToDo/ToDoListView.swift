@@ -21,7 +21,7 @@ struct ToDoListView: View {
                     }label: {
                         Image(systemName: "list.bullet")
                             .resizable()
-                            .frame(width: 15,height: 15)
+                            .frame(width: 10,height: 10)
                             .foregroundStyle(.black)
                             .padding(7)
                             .background(

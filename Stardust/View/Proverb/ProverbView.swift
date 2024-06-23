@@ -11,13 +11,14 @@ struct ProverbView: View {
    
     @StateObject private var proverbViewModel = ProverbViewModel()
     @State private var timer: Timer? = nil
-    @State private var proverbIndex: Int = 0
+    @State private var proverbIndex: Int = 5
     var body: some View {
         ZStack{
             VStack(spacing: 10){
                 Text(proverbViewModel.proverbs[proverbIndex].quote)
-                    .font(AppFont.title3Regular)
+                    .frame(maxWidth: .infinity)
                     .frame(height: 50)
+                    .font(AppFont.bodyBold)
                 Rectangle()
                     .frame(width: 15,height: 1)
                 Text(proverbViewModel.proverbs[proverbIndex].author)
