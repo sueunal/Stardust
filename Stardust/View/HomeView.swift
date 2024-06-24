@@ -13,7 +13,10 @@ struct HomeView: View {
     var body: some View {
         NavigationStack{
             ZStack{
-                if viewModel.errorMessage.isEmpty{
+                if let errorMessage = viewModel.errorMessage{
+                    Text(errorMessage)
+                        .font(.title)
+                }else{
                     BackgroundView()
                     VStack(){
                         Spacer()
@@ -28,11 +31,6 @@ struct HomeView: View {
                     }
                     .padding(.horizontal,16)
                     .navigationTitle("")
-                }else{
-                    Color.black.ignoresSafeArea()
-                    Text(viewModel.errorMessage)
-                        .foregroundStyle(.white)
-                        .font(.largeTitle)
                 }
             }
         }
