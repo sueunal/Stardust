@@ -28,11 +28,15 @@ struct HomeView: View {
                             .frame(height: 150)
                         createNewGoalButton()
                         Spacer()
+                        
                             .frame(height: 200)
                     }
                     .padding(.horizontal,16)
                     .navigationTitle("")
                 }
+            }
+            .onAppear{
+                viewModel.requestPlans()
             }
         }
     }

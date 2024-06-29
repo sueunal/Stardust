@@ -43,14 +43,13 @@ class NetworkManger{
         }
         .resume()
     }
-    func fetchPlan(completation: @escaping ([RequestModel])->()){
-        print("fetch Plan: \(Thread.current)")
+    func fetchPlan(completation: @escaping (Result<[RequestModel],Error>)->()){
         guard let planID = UserDefaults.standard.string(forKey: "planID") else { return }
         let url: String = "\(endPoint)/get/\(planID)"
         guard let url = URL(string: url) else{ return }
         URLSession.shared.dataTask(with: url) { data, response, error in
-            print("fetch URLSession: \(Thread.current)")
             if let error =  error {
+                completation(.failure(error))
                 print("DEBUG: Network Fail \(error.localizedDescription)")
                 return
             }
@@ -61,8 +60,7 @@ class NetworkManger{
             }
             do {
                 let responseData = try JSONDecoder().decode([RequestModel].self, from: data)
-                print("fetch Do: \(Thread.current)")
-                completation(responseData)
+                completation(.success(responseData))
             }catch{
                 print("Network Erorr: \(error.localizedDescription)")
             }
@@ -76,12 +74,9 @@ class PlanViewModel{
     var plans: [Plan] = []
     var toDo: [RequestModel] = []
     var errorMessage: String? = ""
-    
-    let localURL: String = "http://localhost:12341"
-    let networkManager = NetworkManger()
+    private let networkManager = NetworkManger()
    
     func createPlanId() {
-        print("creatPlan start: \(Thread.current)")
         networkManager.connectToServer { requestData in
             self.toDo = requestData
         }
@@ -90,28 +85,30 @@ class PlanViewModel{
         guard let planID = UserDefaults.standard.string(forKey: "planID") else{
             return
         }
-        let url = "\(localURL)/add/\(planID)"
-        let parameter: Parameters? = [
-            "PlanTitle": title,
-            "PlanDetail": messages,
-            "PlanAttainment": [false],
-            "Date": date
-        ]
-        AF.request(url, method: .post, parameters: parameter, encoding: JSONEncoding.default).response{ response in
-            switch response.result{
-            case .success(let data):
-                print(data)
-            case .failure(let fail):
-                print(fail.localizedDescription)
-            }
-        }
+//        let parameter: Parameters? = [
+//            "PlanTitle": title,
+//            "PlanDetail": messages,
+//            "PlanAttainment": [false],
+//            "Date": date
+//        ]
+//        AF.request(url, method: .post, parameters: parameter, encoding: JSONEncoding.default).response{ response in
+//            switch response.result{
+//            case .success(let data):
+//                print(data)
+//            case .failure(let fail):
+//                print(fail.localizedDescription)
+//            }
+//        }
     }
     func requestPlans(){
-        print("request Plan: \(Thread.current)")
-        networkManager.fetchPlan { plans in
+        networkManager.fetchPlan { result in
             DispatchQueue.main.async {
-                print("network Manager : \(Thread.current)")
-                self.toDo = plans
+                switch result {
+                case .success(let plans):
+                    self.toDo = plans
+                case .failure(let error):
+                    self.errorMessage = error.localizedDescription
+                }
             }
         }
     }
