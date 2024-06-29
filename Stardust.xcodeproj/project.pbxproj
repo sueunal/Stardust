@@ -21,7 +21,6 @@
 		2C46822C2C15C66F001AAD64 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C46822B2C15C66F001AAD64 /* CustomButton.swift */; };
 		2C49D1252C16B6CB0050213D /* ToDoItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49D1242C16B6CB0050213D /* ToDoItems.swift */; };
 		2C51C2962C19CC1B00F3020D /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C51C2952C19CC1B00F3020D /* BackgroundView.swift */; };
-		2C51C2992C19CD9600F3020D /* AnimateText in Frameworks */ = {isa = PBXBuildFile; productRef = 2C51C2982C19CD9600F3020D /* AnimateText */; };
 		2C5522CC2C09A22000EBBA3C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5522CB2C09A22000EBBA3C /* Color.swift */; };
 		2C5522CE2C09B8C900EBBA3C /* GoalResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5522CD2C09B8C900EBBA3C /* GoalResultView.swift */; };
 		2C7013CB2C0C482C00ACBFA0 /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7013CA2C0C482C00ACBFA0 /* ToDoListView.swift */; };
@@ -36,10 +35,10 @@
 		2CA189B72C08917100FACAB6 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA189AC2C08917100FACAB6 /* Pretendard-SemiBold.otf */; };
 		2CA189BB2C08DF4D00FACAB6 /* GoalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA189BA2C08DF4D00FACAB6 /* GoalDetailView.swift */; };
 		2CA189BF2C08E4B000FACAB6 /* ProverbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA189BE2C08E4B000FACAB6 /* ProverbView.swift */; };
+		2CB44C7A2C2C590600BD5537 /* PlanAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB44C792C2C590600BD5537 /* PlanAPIError.swift */; };
 		2CC6EA812C108897003445C3 /* CheckToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC6EA802C108897003445C3 /* CheckToDoView.swift */; };
 		2CF3F5352C0F55750026ACA3 /* GoalPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3F5342C0F55750026ACA3 /* GoalPlan.swift */; };
 		2CF3F5372C0F55DC0026ACA3 /* PlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3F5362C0F55DC0026ACA3 /* PlanViewModel.swift */; };
-		2CF3F53A2C0F569F0026ACA3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2CF3F5392C0F569F0026ACA3 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +73,7 @@
 		2CA189AC2C08917100FACAB6 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		2CA189BA2C08DF4D00FACAB6 /* GoalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailView.swift; sourceTree = "<group>"; };
 		2CA189BE2C08E4B000FACAB6 /* ProverbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProverbView.swift; sourceTree = "<group>"; };
+		2CB44C792C2C590600BD5537 /* PlanAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanAPIError.swift; sourceTree = "<group>"; };
 		2CC6EA802C108897003445C3 /* CheckToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckToDoView.swift; sourceTree = "<group>"; };
 		2CF3F5342C0F55750026ACA3 /* GoalPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalPlan.swift; sourceTree = "<group>"; };
 		2CF3F5362C0F55DC0026ACA3 /* PlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewModel.swift; sourceTree = "<group>"; };
@@ -84,8 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CF3F53A2C0F569F0026ACA3 /* Alamofire in Frameworks */,
-				2C51C2992C19CD9600F3020D /* AnimateText in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +93,7 @@
 		2C21145A2C075CC10013EBD9 = {
 			isa = PBXGroup;
 			children = (
+				2CB44C792C2C590600BD5537 /* PlanAPIError.swift */,
 				2C2114652C075CC10013EBD9 /* Stardust */,
 				2C2114642C075CC10013EBD9 /* Products */,
 			);
@@ -253,8 +252,6 @@
 			);
 			name = Stardust;
 			packageProductDependencies = (
-				2CF3F5392C0F569F0026ACA3 /* Alamofire */,
-				2C51C2982C19CD9600F3020D /* AnimateText */,
 			);
 			productName = Stardust;
 			productReference = 2C2114632C075CC10013EBD9 /* Stardust.app */;
@@ -342,6 +339,7 @@
 				2C5522CC2C09A22000EBBA3C /* Color.swift in Sources */,
 				2C3AB4152C246F8900772675 /* Response.swift in Sources */,
 				2CF3F5372C0F55DC0026ACA3 /* PlanViewModel.swift in Sources */,
+				2CB44C7A2C2C590600BD5537 /* PlanAPIError.swift in Sources */,
 				2C3E98B62C1328980071C3F7 /* TimeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,19 +586,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		2C51C2982C19CD9600F3020D /* AnimateText */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2C51C2972C19CD9600F3020D /* XCRemoteSwiftPackageReference "AnimateText" */;
-			productName = AnimateText;
-		};
-		2CF3F5392C0F569F0026ACA3 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2CF3F5382C0F569F0026ACA3 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2C21145B2C075CC10013EBD9 /* Project object */;
 }
