@@ -12,6 +12,7 @@ struct HomeView: View {
     @State var viewModel: PlanViewModel = PlanViewModel()
     var body: some View {
         NavigationStack{
+            
             ZStack{
                 if let errorMessage = viewModel.errorMessage{
                     Text(errorMessage)
