@@ -8,7 +8,7 @@ import SwiftUI
 
 
 struct ToDoItem: View {
-    @Bindable var viewModel: PlanViewModel
+    @EnvironmentObject var viewModel: PlanViewModel
     let gardient = AngularGradient(colors: [.black, .white], center: .top)
     
     var body: some View {
@@ -51,5 +51,6 @@ struct ToDoItem: View {
 }
 
 #Preview {
-    ToDoItem(viewModel: PlanViewModel())
+    ToDoItem()
+        .environmentObject(PlanViewModel())
 }

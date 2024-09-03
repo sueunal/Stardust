@@ -9,19 +9,19 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var createNewGoal: Bool = false
-    @State var viewModel: PlanViewModel = PlanViewModel()
+    @StateObject var viewModel: PlanViewModel = PlanViewModel()
     var body: some View {
         NavigationStack{
-            
             ZStack{
-                if let errorMessage = viewModel.errorMessage{
-                    Text(errorMessage)
-                        .font(.title)
-                }else{
+//                if let errorMessage = viewModel.errorMessage{
+//                    Text(errorMessage)
+//                        .foregroundStyle(.black)
+//                        .font(.title)
+//                }else{
                     BackgroundView()
                     VStack(){
                         Spacer()
-                        ToDoListView(viewModel: viewModel)
+                        ToDoListView()
                         TimerView()
                         ProverbView()
                         Spacer()
@@ -35,10 +35,18 @@ struct HomeView: View {
                     .navigationTitle("")
                 }
             }
+            .environmentObject(viewModel)
             .onAppear{
-                viewModel.requestPlans()
             }
         }
+//    }
+    func akeIncrementer(forIncrement amount: Int) -> () -> Int {
+        var runningTotal = 0
+        func incrementer() -> Int {
+            runningTotal += amount
+            return runningTotal
+        }
+        return incrementer
     }
     @ViewBuilder
     func createNewGoalButton()-> some View{

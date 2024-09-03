@@ -37,7 +37,7 @@
 		2CA189BF2C08E4B000FACAB6 /* ProverbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA189BE2C08E4B000FACAB6 /* ProverbView.swift */; };
 		2CB44C7A2C2C590600BD5537 /* PlanAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB44C792C2C590600BD5537 /* PlanAPIError.swift */; };
 		2CC6EA812C108897003445C3 /* CheckToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC6EA802C108897003445C3 /* CheckToDoView.swift */; };
-		2CF3F5352C0F55750026ACA3 /* GoalPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3F5342C0F55750026ACA3 /* GoalPlan.swift */; };
+		2CF3F5352C0F55750026ACA3 /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3F5342C0F55750026ACA3 /* Plan.swift */; };
 		2CF3F5372C0F55DC0026ACA3 /* PlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3F5362C0F55DC0026ACA3 /* PlanViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,7 +75,7 @@
 		2CA189BE2C08E4B000FACAB6 /* ProverbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProverbView.swift; sourceTree = "<group>"; };
 		2CB44C792C2C590600BD5537 /* PlanAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanAPIError.swift; sourceTree = "<group>"; };
 		2CC6EA802C108897003445C3 /* CheckToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckToDoView.swift; sourceTree = "<group>"; };
-		2CF3F5342C0F55750026ACA3 /* GoalPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalPlan.swift; sourceTree = "<group>"; };
+		2CF3F5342C0F55750026ACA3 /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
 		2CF3F5362C0F55DC0026ACA3 /* PlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,7 +93,6 @@
 		2C21145A2C075CC10013EBD9 = {
 			isa = PBXGroup;
 			children = (
-				2CB44C792C2C590600BD5537 /* PlanAPIError.swift */,
 				2C2114652C075CC10013EBD9 /* Stardust */,
 				2C2114642C075CC10013EBD9 /* Products */,
 			);
@@ -207,7 +206,7 @@
 		2CF239B62C1433B900224094 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2CF3F5342C0F55750026ACA3 /* GoalPlan.swift */,
+				2CF3F5342C0F55750026ACA3 /* Plan.swift */,
 				2C9E4CAB2C147F8A00E2FD6C /* ProverbModel.swift */,
 				2C3AB4162C246FC200772675 /* Request.swift */,
 				2C3AB4142C246F8900772675 /* Response.swift */,
@@ -229,6 +228,7 @@
 		2CF239B82C14340700224094 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2CB44C792C2C590600BD5537 /* PlanAPIError.swift */,
 				2C9E4CAD2C14817900E2FD6C /* ProverbViewModel.swift */,
 				2CF3F5362C0F55DC0026ACA3 /* PlanViewModel.swift */,
 			);
@@ -331,7 +331,7 @@
 				2C229FEA2C0B8EC100186D66 /* TimerView.swift in Sources */,
 				2C2114672C075CC10013EBD9 /* StardustApp.swift in Sources */,
 				2C8800B42C0E077300972764 /* ToDoItem.swift in Sources */,
-				2CF3F5352C0F55750026ACA3 /* GoalPlan.swift in Sources */,
+				2CF3F5352C0F55750026ACA3 /* Plan.swift in Sources */,
 				2CA189982C087DBE00FACAB6 /* FontStyle.swift in Sources */,
 				2C9E4CAC2C147F8A00E2FD6C /* ProverbModel.swift in Sources */,
 				2C9E4CAE2C14817900E2FD6C /* ProverbViewModel.swift in Sources */,
