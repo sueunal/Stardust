@@ -19,25 +19,23 @@ struct HomeView: View {
 //                        .font(.title)
 //                }else{
                     BackgroundView()
-                    VStack(){
-                        Spacer()
-                        ToDoListView()
+                VStack{
                         TimerView()
+                        
                         ProverbView()
                         Spacer()
-                            .frame(height: 150)
-                        createNewGoalButton()
-                        Spacer()
-                        
-                            .frame(height: 200)
+                            .frame(height: 50)
+                        HStack(spacing: 10){
+                            createNewGoalButton()
+                            
+                            ToDoListView()
+                        }
                     }
                     .padding(.horizontal,16)
                     .navigationTitle("")
                 }
             }
             .environmentObject(viewModel)
-            .onAppear{
-            }
         }
 //    }
     func akeIncrementer(forIncrement amount: Int) -> () -> Int {
@@ -53,16 +51,26 @@ struct HomeView: View {
         NavigationLink {
             CreateGoal()
         } label: {
-            Circle()
-                .frame(width: 50,height: 50)
-                .foregroundStyle(.white.opacity(1))
-                .blur(radius: 1)
-                .font(AppFont.bodyBold)
-                .overlay{
-                    Text("➕")
-                        .frame(width: 25,height: 25)
-                        .foregroundStyle(.black)
+            Text("메모 생성")
+                .foregroundStyle(.black.opacity(1))
+                .font(AppFont.title2Bold)
+                .frame(maxWidth: .infinity)
+                .frame(height: 150)
+                .background{
+                    RoundedRectangle(cornerRadius: 8)
+                        .fill(.white)
+                        .blur(radius: 1)
                 }
+            //            Circle()
+//                .frame(width: 50,height: 50)
+//                .foregroundStyle(.white.opacity(1))
+//                .blur(radius: 1)
+//                .font(AppFont.bodyBold)
+//                .overlay{
+//                    Text("➕")
+//                        .frame(width: 25,height: 25)
+//                        .foregroundStyle(.black)
+//                }
         }
     }
 }

@@ -8,35 +8,29 @@
 import SwiftUI
 
 struct ToDoListView: View {
-    @State private var showToDoView: Bool = false
     @EnvironmentObject var viewModel: PlanViewModel
+    @State private var showToDoView: Bool = false
     var body: some View {
         NavigationStack{
-            ZStack{
-                VStack{
-                    Spacer()
-                        .frame(height: 32)
-                    Button{
-                        showToDoView.toggle()
-                    }label: {
-                        Image(systemName: "list.bullet")
-                            .resizable()
-                            .frame(width: 10,height: 10)
-                            .foregroundStyle(.black)
-                            .padding(7)
-                            .background(
-                                Circle()
-                                    .fill(.white)
-                            )
-                            .frame(maxWidth: .infinity, alignment: .trailing)
-                            .shadow(radius: 1,y: 2)
-                    }
-                    Spacer()
+            VStack{
+                Button{
+                    showToDoView.toggle()
+                }label: {
+                    Text("작성한 메모")
+                        .foregroundStyle(.black)
+                        .frame(maxWidth: .infinity)
+                        .font(AppFont.title2Bold)
+                        .frame(height: 150)
+                        .background(
+                            RoundedRectangle(cornerRadius: 8)
+                                .fill(.white)
+                                .blur(radius: 1)
+                        )
                 }
-                .navigationDestination(isPresented: $showToDoView){
-                    ToDoItem()
-                        .environmentObject(viewModel)
-                }
+            }
+            .navigationDestination(isPresented: $showToDoView){
+                ToDoItem()
+                    .environmentObject(viewModel)
             }
         }
     }
