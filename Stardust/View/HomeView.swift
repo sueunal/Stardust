@@ -13,15 +13,19 @@ struct HomeView: View {
     var body: some View {
         NavigationStack{
             ZStack{
-//                if let errorMessage = viewModel.errorMessage{
-//                    Text(errorMessage)
-//                        .foregroundStyle(.black)
-//                        .font(.title)
-//                }else{
+                BackgroundView()
+                
+                TimerView()
+                if let errorMessage = viewModel.errorMessage{
+                    Text(errorMessage)
+                        .foregroundStyle(.white)
+                        .fontWeight(.heavy)
+                        .frame(height: 300, alignment: .bottom)
+                }else{
                     BackgroundView()
-                VStack{
-                        TimerView()
+                    VStack{
                         
+                        TimerView()
                         ProverbView()
                         Spacer()
                             .frame(height: 50)
@@ -37,7 +41,7 @@ struct HomeView: View {
             }
             .environmentObject(viewModel)
         }
-//    }
+    }
     func akeIncrementer(forIncrement amount: Int) -> () -> Int {
         var runningTotal = 0
         func incrementer() -> Int {
@@ -58,23 +62,12 @@ struct HomeView: View {
                 .frame(height: 150)
                 .background{
                     RoundedRectangle(cornerRadius: 8)
-                        .fill(.white)
                         .blur(radius: 1)
                 }
-            //            Circle()
-//                .frame(width: 50,height: 50)
-//                .foregroundStyle(.white.opacity(1))
-//                .blur(radius: 1)
-//                .font(AppFont.bodyBold)
-//                .overlay{
-//                    Text("➕")
-//                        .frame(width: 25,height: 25)
-//                        .foregroundStyle(.black)
-//                }
+                .foregroundStyle(Color.dark)
         }
     }
 }
-
 #Preview{
     HomeView()
 }

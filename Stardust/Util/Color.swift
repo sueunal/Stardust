@@ -9,5 +9,5 @@ import Foundation
 import SwiftUI
 
 let TextColor: Color = Color("textColor")
-let BackgroundColor: Color = Color("backgrounColor")
-let DarkColor: Color = Color("darkColor")
+let backgroundColor: Color = Color("backgrounColor")
+let darkColor: Color = Color("darkColor")

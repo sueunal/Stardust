@@ -32,19 +32,14 @@ class NetworkManger{
         return ""
     }
     func asyncTest() async throws -> [RequestModel]{
-        guard let planID = UserDefaults.standard.string(forKey: "planID") else { return  []}
-        guard let url  = URL(string: "\(endPoint)/get/\(planID)") else{
-            return []
-        }
+        guard let planID = UserDefaults.standard.string(forKey: "planID") else { return  [] }
+        guard let url  = URL(string: "\(endPoint)/get/\(planID)") else{ return [] }
         do{
-            let (data, response) = try await URLSession.shared.data(from: url)
-            print("DEBUG Data: \(data)")
-            print(response)
+            let (data, _) = try await URLSession.shared.data(from: url)
             let decodeData = try JSONDecoder().decode([RequestModel].self, from: data)
-           return decodeData
-        } catch{
-            print("ERROR JSON:", error.localizedDescription)
-            return []
+            return decodeData
+        } catch {
+            throw PlanAPIError.requestFailed(description: "Network Error ")
         }
     }
 }
@@ -85,15 +80,15 @@ extension NetworkManger{
 class PlanViewModel: ObservableObject{
     @Published var plans: [Plan] = []
     @Published var toDo: [RequestModel] = []
-    @Published var errorMessage: String? = ""
+    @Published var errorMessage: String? = nil
     private let networkManager = NetworkManger()
     
     init(){
         Task{
-            try await ays()
+            try await fetchData()
         }
     }
-    func ays() async throws{
+    func fetchData() async throws{
         do{
             let toDos = try await networkManager.asyncTest()
             self.toDo = toDos
@@ -118,7 +113,7 @@ class PlanViewModel: ObservableObject{
                 case .success(let plans):
                     self?.toDo = plans
                 case .failure(let error):
-                    self?.errorMessage = error.localizedDescription
+                    self?.errorMessage = "네트워크 연결에 실패 했습니다.\n인터넷 연결 상태를 확인해주세요"
                 }
             }
         }
