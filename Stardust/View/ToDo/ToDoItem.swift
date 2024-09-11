@@ -16,11 +16,11 @@ struct ToDoItem: View {
             ZStack{
                 BackgroundView()
                 VStack{
+                    Text("총 \(viewModel.plans.count) 개!")
+                        .frame(maxWidth: .infinity,alignment: .leading)
+                        .font(AppFont.title1Bold)
+                        .foregroundStyle(.white)
                     ScrollView{
-                        Text("총 \(viewModel.plans.count) 개!")
-                            .frame(maxWidth: .infinity,alignment: .leading)
-                            .font(AppFont.title1Bold)
-                            .foregroundStyle(.white)
                         ForEach(viewModel.toDo, id:\.id) { toDo in
                             NavigationLink{
                                 CheckToDoView(title: toDo.PlanTitle, messages: toDo.PlanDetail)
@@ -31,11 +31,11 @@ struct ToDoItem: View {
                                 .frame(height: 10)
                         }
                     }
-                    .padding(.horizontal,16)
                     .onAppear{
                         viewModel.requestPlans()
                     }
                 }
+                .padding(.horizontal,16)
             }
         }
     }

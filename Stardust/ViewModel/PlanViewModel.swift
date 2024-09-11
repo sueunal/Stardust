@@ -5,7 +5,6 @@
 //  Created by sueun kim on 6/4/24.
 //
 import SwiftUI
-import Observation
 
 
 class NetworkManger{

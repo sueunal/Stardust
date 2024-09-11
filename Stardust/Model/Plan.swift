@@ -8,11 +8,11 @@
 import Foundation
 
 struct Plan: Codable, Identifiable{
-    let id: String
-    let title: String
-    let messages: [String]
-    let date: Int
+    let id: UUID
+    let planTitle: String
+    let planDetail: String
+    let date: Date
     
-    static let dummy = Plan(id: "", title: "", messages: ["",""], date: 10)
+    static let dummy = Plan(id: UUID(), planTitle: "", planDetail: "", date: .now)
 }
 

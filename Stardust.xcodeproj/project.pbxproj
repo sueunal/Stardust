@@ -21,10 +21,12 @@
 		2C46822C2C15C66F001AAD64 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C46822B2C15C66F001AAD64 /* CustomButton.swift */; };
 		2C49D1252C16B6CB0050213D /* ToDoItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49D1242C16B6CB0050213D /* ToDoItems.swift */; };
 		2C51C2962C19CC1B00F3020D /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C51C2952C19CC1B00F3020D /* BackgroundView.swift */; };
+		2C539AF52C918AA100658253 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C539AF42C918AA100658253 /* DataController.swift */; };
 		2C5522CC2C09A22000EBBA3C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5522CB2C09A22000EBBA3C /* Color.swift */; };
 		2C5522CE2C09B8C900EBBA3C /* GoalResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5522CD2C09B8C900EBBA3C /* GoalResultView.swift */; };
 		2C7013CB2C0C482C00ACBFA0 /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7013CA2C0C482C00ACBFA0 /* ToDoListView.swift */; };
 		2C8800B42C0E077300972764 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8800B32C0E077300972764 /* ToDoItem.swift */; };
+		2C8857722C91D967000A4C2A /* Plan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C8857702C91D967000A4C2A /* Plan.xcdatamodeld */; };
 		2C9E4CAA2C147EAD00E2FD6C /* proverb.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C9E4CA92C147EAD00E2FD6C /* proverb.json */; };
 		2C9E4CAC2C147F8A00E2FD6C /* ProverbModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E4CAB2C147F8A00E2FD6C /* ProverbModel.swift */; };
 		2C9E4CAE2C14817900E2FD6C /* ProverbViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E4CAD2C14817900E2FD6C /* ProverbViewModel.swift */; };
@@ -58,10 +60,12 @@
 		2C46822B2C15C66F001AAD64 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		2C49D1242C16B6CB0050213D /* ToDoItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItems.swift; sourceTree = "<group>"; };
 		2C51C2952C19CC1B00F3020D /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		2C539AF42C918AA100658253 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		2C5522CB2C09A22000EBBA3C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2C5522CD2C09B8C900EBBA3C /* GoalResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalResultView.swift; sourceTree = "<group>"; };
 		2C7013CA2C0C482C00ACBFA0 /* ToDoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
 		2C8800B32C0E077300972764 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
+		2C8857712C91D967000A4C2A /* Plan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Plan.xcdatamodel; sourceTree = "<group>"; };
 		2C9E4CA92C147EAD00E2FD6C /* proverb.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = proverb.json; sourceTree = "<group>"; };
 		2C9E4CAB2C147F8A00E2FD6C /* ProverbModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProverbModel.swift; sourceTree = "<group>"; };
 		2C9E4CAD2C14817900E2FD6C /* ProverbViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProverbViewModel.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				2C2114682C075CC10013EBD9 /* HomeView.swift */,
+				2C539AF42C918AA100658253 /* DataController.swift */,
 				2C51C2952C19CC1B00F3020D /* BackgroundView.swift */,
 				2C229FE92C0B8EC100186D66 /* TimerView.swift */,
 				2C4682272C15A017001AAD64 /* Custom */,
@@ -210,6 +215,7 @@
 				2C9E4CAB2C147F8A00E2FD6C /* ProverbModel.swift */,
 				2C3AB4162C246FC200772675 /* Request.swift */,
 				2C3AB4142C246F8900772675 /* Response.swift */,
+				2C8857702C91D967000A4C2A /* Plan.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -320,6 +326,7 @@
 				2C3AB4172C246FC200772675 /* Request.swift in Sources */,
 				2C46822A2C15B017001AAD64 /* DetailGoalItem.swift in Sources */,
 				2C51C2962C19CC1B00F3020D /* BackgroundView.swift in Sources */,
+				2C539AF52C918AA100658253 /* DataController.swift in Sources */,
 				2CA189BB2C08DF4D00FACAB6 /* GoalDetailView.swift in Sources */,
 				2C2114692C075CC10013EBD9 /* HomeView.swift in Sources */,
 				2C46822C2C15C66F001AAD64 /* CustomButton.swift in Sources */,
@@ -334,6 +341,7 @@
 				2CF3F5352C0F55750026ACA3 /* Plan.swift in Sources */,
 				2CA189982C087DBE00FACAB6 /* FontStyle.swift in Sources */,
 				2C9E4CAC2C147F8A00E2FD6C /* ProverbModel.swift in Sources */,
+				2C8857722C91D967000A4C2A /* Plan.xcdatamodeld in Sources */,
 				2C9E4CAE2C14817900E2FD6C /* ProverbViewModel.swift in Sources */,
 				2CC6EA812C108897003445C3 /* CheckToDoView.swift in Sources */,
 				2C5522CC2C09A22000EBBA3C /* Color.swift in Sources */,
@@ -586,6 +594,20 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCVersionGroup section */
+		2C8857702C91D967000A4C2A /* Plan.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2C8857712C91D967000A4C2A /* Plan.xcdatamodel */,
+			);
+			currentVersion = 2C8857712C91D967000A4C2A /* Plan.xcdatamodel */;
+			name = Plan.xcdatamodeld;
+			path = /Users/sueunkim/Desktop/iOS/Stardust/Stardust/Model/Plan.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2C21145B2C075CC10013EBD9 /* Project object */;
 }

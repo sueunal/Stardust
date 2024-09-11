@@ -8,6 +8,7 @@ import SwiftUI
 
 
 struct HomeView: View {
+    @FetchRequest(sortDescriptors: []) var plan: FetchedResults<Plan>
     @State private var createNewGoal: Bool = false
     @StateObject var viewModel: PlanViewModel = PlanViewModel()
     var body: some View {
@@ -22,13 +23,10 @@ struct HomeView: View {
                         .fontWeight(.heavy)
                         .frame(height: 300, alignment: .bottom)
                 }else{
-                    BackgroundView()
                     VStack{
-                        
-                        TimerView()
                         ProverbView()
                         Spacer()
-                            .frame(height: 50)
+                            .frame(height: 150)
                         HStack(spacing: 10){
                             createNewGoalButton()
                             
@@ -64,7 +62,7 @@ struct HomeView: View {
                     RoundedRectangle(cornerRadius: 8)
                         .blur(radius: 1)
                 }
-                .foregroundStyle(Color.dark)
+                .foregroundStyle(Color.white)
         }
     }
 }
