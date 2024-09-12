@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CreateGoal: View {
     @State private var title: String = ""
+    @Environment (\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: []) var plans: FetchedResults<Plan>
     let gradient = LinearGradient(colors: [Color.black,Color.black,Color.black,Color.white],
                                   startPoint: .top, endPoint: .bottom)
     var body: some View {

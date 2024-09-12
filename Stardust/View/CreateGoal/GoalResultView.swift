@@ -23,7 +23,7 @@ struct GoalResultView: View {
                     //                    ResultPlanView(title: title, detailGoalList: detailGoalList)
                     Spacer()
                     CustomButton(buttonText: "확인"){
-                        viewModel.addPlan(title, detailGoalList, transferToDate())
+                        viewModel.addPlan(title, detailGoalList, "")
                         showHomeView.toggle()
                     }
                 }
@@ -31,20 +31,11 @@ struct GoalResultView: View {
                 .onAppear{
                     isOnAppear = true
                 }
-                .navigationDestination(isPresented: $showHomeView){
-                    HomeView()
-                        .navigationBarBackButtonHidden(true)
-                }
+                
             }
         }
     }
-    func transferToDate()-> String{
-        let date = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-
-        return dateFormatter.string(from: date)
-    }
+   
 }
 
 struct ResultPlanView: View {

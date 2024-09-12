@@ -8,15 +8,16 @@ import SwiftUI
 
 
 struct HomeView: View {
-    @FetchRequest(sortDescriptors: []) var plan: FetchedResults<Plan>
-    @State private var createNewGoal: Bool = false
+    @FetchRequest(sortDescriptors: []) var plans: FetchedResults<Plan>
     @StateObject var viewModel: PlanViewModel = PlanViewModel()
+    @Environment(\.managedObjectContext) var moc
+    
+    @State private var createNewGoal: Bool = false
     var body: some View {
         NavigationStack{
             ZStack{
                 BackgroundView()
                 
-                TimerView()
                 if let errorMessage = viewModel.errorMessage{
                     Text(errorMessage)
                         .foregroundStyle(.white)
@@ -24,34 +25,50 @@ struct HomeView: View {
                         .frame(height: 300, alignment: .bottom)
                 }else{
                     VStack{
+                        TimerView()
+                        
                         ProverbView()
-                        Spacer()
-                            .frame(height: 150)
+                        
                         HStack(spacing: 10){
                             createNewGoalButton()
                             
-                            ToDoListView()
+                            toDoListView()
                         }
                     }
                     .padding(.horizontal,16)
-                    .navigationTitle("")
+                    .environment(\.managedObjectContext, moc)
                 }
             }
             .environmentObject(viewModel)
         }
     }
-    func akeIncrementer(forIncrement amount: Int) -> () -> Int {
-        var runningTotal = 0
-        func incrementer() -> Int {
-            runningTotal += amount
-            return runningTotal
+    @ViewBuilder
+    func toDoListView()->some View{
+        VStack{
+            NavigationLink{
+                ToDoItem()
+                    .environmentObject(viewModel)
+                    .environment(\.managedObjectContext, moc)
+            }label: {
+                Text("작성한 메모")
+                    .foregroundStyle(.black)
+                    .frame(maxWidth: .infinity)
+                    .font(AppFont.title2Bold)
+                    .frame(height: 150)
+                    .background(
+                        RoundedRectangle(cornerRadius: 8)
+                            .fill(.white)
+                            .blur(radius: 1)
+                    )
+            }
         }
-        return incrementer
     }
+    
     @ViewBuilder
     func createNewGoalButton()-> some View{
         NavigationLink {
             CreateGoal()
+                .environment(\.managedObjectContext, moc)
         } label: {
             Text("메모 생성")
                 .foregroundStyle(.black.opacity(1))

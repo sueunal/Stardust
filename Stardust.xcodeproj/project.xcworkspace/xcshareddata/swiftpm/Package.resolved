@@ -1,0 +1,24 @@
+{
+  "originHash" : "4ae2688b7facd83f9450dc1d6a03f75ef77fcb5cf581856dd19d81465757e0ab",
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "state" : {
+        "revision" : "f455c2975872ccd2d9c81594c658af65716e9b9a",
+        "version" : "5.9.1"
+      }
+    },
+    {
+      "identity" : "animatetext",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jasudev/AnimateText",
+      "state" : {
+        "revision" : "c55847e03bb3f36cf83cc217fe60ec5feda9ddd6",
+        "version" : "0.5.0"
+      }
+    }
+  ],
+  "version" : 3
+}

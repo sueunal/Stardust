@@ -8,6 +8,7 @@ import SwiftUI
 
 
 struct ToDoItem: View {
+    @FetchRequest(sortDescriptors: []) var plans: FetchedResults<Plan>
     @EnvironmentObject var viewModel: PlanViewModel
     let gardient = AngularGradient(colors: [.black, .white], center: .top)
     
@@ -16,23 +17,16 @@ struct ToDoItem: View {
             ZStack{
                 BackgroundView()
                 VStack{
-                    Text("총 \(viewModel.plans.count) 개!")
+                    Text("총 \(plans.count) 개!")
                         .frame(maxWidth: .infinity,alignment: .leading)
                         .font(AppFont.title1Bold)
                         .foregroundStyle(.white)
                     ScrollView{
-                        ForEach(viewModel.toDo, id:\.id) { toDo in
-                            NavigationLink{
-                                CheckToDoView(title: toDo.PlanTitle, messages: toDo.PlanDetail)
-                            }label: {
-                                ToDoItems(title: toDo.PlanTitle, messages: toDo.PlanDetail, date: toDo.Date)
-                            }
-                            Spacer()
-                                .frame(height: 10)
+                        ForEach(plans){ plan in
+                            Text(plan.isComplete.description)
+                                .font(.largeTitle)
+                                .foregroundStyle(.black)
                         }
-                    }
-                    .onAppear{
-                        viewModel.requestPlans()
                     }
                 }
                 .padding(.horizontal,16)

@@ -16,6 +16,10 @@ struct GoalDetailView: View {
     @State private var isAddAnimation: Bool = false
     @State private var createGoal: Bool = false
     @State private var isShow: Bool = false
+    @State private var showHomeView: Bool = false
+
+    @FetchRequest(sortDescriptors: []) var plan: FetchedResults<Plan>
+    @Environment(\.managedObjectContext) var moc
     var body: some View {
         NavigationStack{
             ZStack{
@@ -31,17 +35,30 @@ struct GoalDetailView: View {
                     addDetailListView()
                     Spacer()
                     CustomButton(buttonText: "목표 생성하기") {
-                        createGoal.toggle()
+                        let plan = Plan(context: moc)
+                        plan.id = UUID()
+                        plan.planTitle = title
+                        plan.isComplete = false
+                        plan.date = transferToDate()
+                        try? moc.save()
+                        showHomeView.toggle()
                     }
                     .disabled(detailGoalList.isEmpty)
                 }
                 .padding(.horizontal,16)
             }
-            .navigationDestination(isPresented: $createGoal){
-                GoalResultView(title: $title, goalDetail: $detailGoalText, detailGoalList: detailGoalList)
+            .navigationDestination(isPresented: $showHomeView){
+                HomeView()
                     .navigationBarBackButtonHidden(true)
             }
         }
+    }
+     func transferToDate()-> String{
+        let date = Date.now
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+
+        return dateFormatter.string(from: date)
     }
     @ViewBuilder
     func titleMessage()-> some View{
