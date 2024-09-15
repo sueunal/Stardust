@@ -7,7 +7,6 @@ struct GoalResultView: View {
     @State private var isOnAppear: Bool = false
     @Binding var title: String
     @Binding var goalDetail: String
-     var viewModel: PlanViewModel = PlanViewModel()
     let detailGoalList: [String]
     var body: some View {
         NavigationStack{
@@ -20,10 +19,8 @@ struct GoalResultView: View {
                         .frame(height: 16)
                     ProverbView()
                     Spacer()
-                    //                    ResultPlanView(title: title, detailGoalList: detailGoalList)
                     Spacer()
                     CustomButton(buttonText: "확인"){
-                        viewModel.addPlan(title, detailGoalList, "")
                         showHomeView.toggle()
                     }
                 }

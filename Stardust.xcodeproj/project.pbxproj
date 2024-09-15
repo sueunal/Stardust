@@ -14,8 +14,6 @@
 		2C2114712C075CC20013EBD9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C2114702C075CC20013EBD9 /* Preview Assets.xcassets */; };
 		2C2114942C0776E30013EBD9 /* CreateGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2114932C0776E30013EBD9 /* CreateGoal.swift */; };
 		2C229FEA2C0B8EC100186D66 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C229FE92C0B8EC100186D66 /* TimerView.swift */; };
-		2C3AB4152C246F8900772675 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3AB4142C246F8900772675 /* Response.swift */; };
-		2C3AB4172C246FC200772675 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3AB4162C246FC200772675 /* Request.swift */; };
 		2C3E98B62C1328980071C3F7 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E98B52C1328980071C3F7 /* TimeManager.swift */; };
 		2C46822A2C15B017001AAD64 /* DetailGoalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4682292C15B017001AAD64 /* DetailGoalItem.swift */; };
 		2C46822C2C15C66F001AAD64 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C46822B2C15C66F001AAD64 /* CustomButton.swift */; };
@@ -25,7 +23,6 @@
 		2C5522CC2C09A22000EBBA3C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5522CB2C09A22000EBBA3C /* Color.swift */; };
 		2C5522CE2C09B8C900EBBA3C /* GoalResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5522CD2C09B8C900EBBA3C /* GoalResultView.swift */; };
 		2C8800B42C0E077300972764 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8800B32C0E077300972764 /* ToDoItem.swift */; };
-		2C8857722C91D967000A4C2A /* Plan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C8857702C91D967000A4C2A /* Plan.xcdatamodeld */; };
 		2C9E4CAA2C147EAD00E2FD6C /* proverb.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C9E4CA92C147EAD00E2FD6C /* proverb.json */; };
 		2C9E4CAC2C147F8A00E2FD6C /* ProverbModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E4CAB2C147F8A00E2FD6C /* ProverbModel.swift */; };
 		2C9E4CAE2C14817900E2FD6C /* ProverbViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E4CAD2C14817900E2FD6C /* ProverbViewModel.swift */; };
@@ -36,6 +33,7 @@
 		2CA189B72C08917100FACAB6 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA189AC2C08917100FACAB6 /* Pretendard-SemiBold.otf */; };
 		2CA189BB2C08DF4D00FACAB6 /* GoalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA189BA2C08DF4D00FACAB6 /* GoalDetailView.swift */; };
 		2CA189BF2C08E4B000FACAB6 /* ProverbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA189BE2C08E4B000FACAB6 /* ProverbView.swift */; };
+		2CAEDA042C934CE4009209C5 /* Plan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CAEDA022C934CE4009209C5 /* Plan.xcdatamodeld */; };
 		2CB44C7A2C2C590600BD5537 /* PlanAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB44C792C2C590600BD5537 /* PlanAPIError.swift */; };
 		2CC6EA812C108897003445C3 /* CheckToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC6EA802C108897003445C3 /* CheckToDoView.swift */; };
 		2CF3F5372C0F55DC0026ACA3 /* PlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3F5362C0F55DC0026ACA3 /* PlanViewModel.swift */; };
@@ -51,8 +49,6 @@
 		2C2114702C075CC20013EBD9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2C2114932C0776E30013EBD9 /* CreateGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoal.swift; sourceTree = "<group>"; };
 		2C229FE92C0B8EC100186D66 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
-		2C3AB4142C246F8900772675 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		2C3AB4162C246FC200772675 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		2C3E98B52C1328980071C3F7 /* TimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
 		2C4682292C15B017001AAD64 /* DetailGoalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGoalItem.swift; sourceTree = "<group>"; };
 		2C46822B2C15C66F001AAD64 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -62,7 +58,6 @@
 		2C5522CB2C09A22000EBBA3C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2C5522CD2C09B8C900EBBA3C /* GoalResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalResultView.swift; sourceTree = "<group>"; };
 		2C8800B32C0E077300972764 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
-		2C8857712C91D967000A4C2A /* Plan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Plan.xcdatamodel; sourceTree = "<group>"; };
 		2C9E4CA92C147EAD00E2FD6C /* proverb.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = proverb.json; sourceTree = "<group>"; };
 		2C9E4CAB2C147F8A00E2FD6C /* ProverbModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProverbModel.swift; sourceTree = "<group>"; };
 		2C9E4CAD2C14817900E2FD6C /* ProverbViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProverbViewModel.swift; sourceTree = "<group>"; };
@@ -74,6 +69,7 @@
 		2CA189AC2C08917100FACAB6 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		2CA189BA2C08DF4D00FACAB6 /* GoalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailView.swift; sourceTree = "<group>"; };
 		2CA189BE2C08E4B000FACAB6 /* ProverbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProverbView.swift; sourceTree = "<group>"; };
+		2CAEDA032C934CE4009209C5 /* Plan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Plan.xcdatamodel; sourceTree = "<group>"; };
 		2CB44C792C2C590600BD5537 /* PlanAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanAPIError.swift; sourceTree = "<group>"; };
 		2CC6EA802C108897003445C3 /* CheckToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckToDoView.swift; sourceTree = "<group>"; };
 		2CF3F5362C0F55DC0026ACA3 /* PlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewModel.swift; sourceTree = "<group>"; };
@@ -207,9 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				2C9E4CAB2C147F8A00E2FD6C /* ProverbModel.swift */,
-				2C3AB4162C246FC200772675 /* Request.swift */,
-				2C3AB4142C246F8900772675 /* Response.swift */,
-				2C8857702C91D967000A4C2A /* Plan.xcdatamodeld */,
+				2CAEDA022C934CE4009209C5 /* Plan.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,7 +311,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C5522CE2C09B8C900EBBA3C /* GoalResultView.swift in Sources */,
-				2C3AB4172C246FC200772675 /* Request.swift in Sources */,
 				2C46822A2C15B017001AAD64 /* DetailGoalItem.swift in Sources */,
 				2C51C2962C19CC1B00F3020D /* BackgroundView.swift in Sources */,
 				2C539AF52C918AA100658253 /* DataController.swift in Sources */,
@@ -328,16 +321,15 @@
 				2C08D2432C143F31004DAEA4 /* CustomTextField.swift in Sources */,
 				2C2114942C0776E30013EBD9 /* CreateGoal.swift in Sources */,
 				2C49D1252C16B6CB0050213D /* ToDoItems.swift in Sources */,
+				2CAEDA042C934CE4009209C5 /* Plan.xcdatamodeld in Sources */,
 				2C229FEA2C0B8EC100186D66 /* TimerView.swift in Sources */,
 				2C2114672C075CC10013EBD9 /* StardustApp.swift in Sources */,
 				2C8800B42C0E077300972764 /* ToDoItem.swift in Sources */,
 				2CA189982C087DBE00FACAB6 /* FontStyle.swift in Sources */,
 				2C9E4CAC2C147F8A00E2FD6C /* ProverbModel.swift in Sources */,
-				2C8857722C91D967000A4C2A /* Plan.xcdatamodeld in Sources */,
 				2C9E4CAE2C14817900E2FD6C /* ProverbViewModel.swift in Sources */,
 				2CC6EA812C108897003445C3 /* CheckToDoView.swift in Sources */,
 				2C5522CC2C09A22000EBBA3C /* Color.swift in Sources */,
-				2C3AB4152C246F8900772675 /* Response.swift in Sources */,
 				2CF3F5372C0F55DC0026ACA3 /* PlanViewModel.swift in Sources */,
 				2CB44C7A2C2C590600BD5537 /* PlanAPIError.swift in Sources */,
 				2C3E98B62C1328980071C3F7 /* TimeManager.swift in Sources */,
@@ -485,7 +477,6 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
@@ -527,7 +518,6 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
@@ -588,12 +578,12 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCVersionGroup section */
-		2C8857702C91D967000A4C2A /* Plan.xcdatamodeld */ = {
+		2CAEDA022C934CE4009209C5 /* Plan.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2C8857712C91D967000A4C2A /* Plan.xcdatamodel */,
+				2CAEDA032C934CE4009209C5 /* Plan.xcdatamodel */,
 			);
-			currentVersion = 2C8857712C91D967000A4C2A /* Plan.xcdatamodel */;
+			currentVersion = 2CAEDA032C934CE4009209C5 /* Plan.xcdatamodel */;
 			name = Plan.xcdatamodeld;
 			path = /Users/sueunkim/Desktop/iOS/Stardust/Stardust/Model/Plan.xcdatamodeld;
 			sourceTree = "<group>";

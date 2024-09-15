@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomeView: View {
     @FetchRequest(sortDescriptors: []) var plans: FetchedResults<Plan>
-    @StateObject var viewModel: PlanViewModel = PlanViewModel()
     @Environment(\.managedObjectContext) var moc
     
     @State private var createNewGoal: Bool = false
@@ -18,12 +17,6 @@ struct HomeView: View {
             ZStack{
                 BackgroundView()
                 
-                if let errorMessage = viewModel.errorMessage{
-                    Text(errorMessage)
-                        .foregroundStyle(.white)
-                        .fontWeight(.heavy)
-                        .frame(height: 300, alignment: .bottom)
-                }else{
                     VStack{
                         TimerView()
                         
@@ -39,15 +32,12 @@ struct HomeView: View {
                     .environment(\.managedObjectContext, moc)
                 }
             }
-            .environmentObject(viewModel)
-        }
     }
     @ViewBuilder
     func toDoListView()->some View{
         VStack{
             NavigationLink{
                 ToDoItem()
-                    .environmentObject(viewModel)
                     .environment(\.managedObjectContext, moc)
             }label: {
                 Text("작성한 메모")

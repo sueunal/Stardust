@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ToDoItem: View {
     @FetchRequest(sortDescriptors: []) var plans: FetchedResults<Plan>
-    @EnvironmentObject var viewModel: PlanViewModel
+    @State private var isComplete: Bool = false
     let gardient = AngularGradient(colors: [.black, .white], center: .top)
     
     var body: some View {
@@ -23,10 +23,15 @@ struct ToDoItem: View {
                         .foregroundStyle(.white)
                     ScrollView{
                         ForEach(plans){ plan in
-                            Text(plan.isComplete.description)
-                                .font(.largeTitle)
-                                .foregroundStyle(.black)
+                            Text(plan.planTitle ?? "")
+                            Text(plan.date ?? "")
+                            
+//                            Toggle(isOn: $isComplete){
+//                                plan.isComplete.toggle()
+//                            }
                         }
+                        .font(.largeTitle)
+                        .foregroundStyle(.black)
                     }
                 }
                 .padding(.horizontal,16)
@@ -46,5 +51,4 @@ struct ToDoItem: View {
 
 #Preview {
     ToDoItem()
-        .environmentObject(PlanViewModel())
 }

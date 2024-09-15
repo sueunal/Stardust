@@ -13,8 +13,10 @@ struct StardustApp: App {
     @StateObject private var dataController: DataController = DataController()
     var body: some Scene {
         WindowGroup {
-            HomeView()
-                .environment(\.managedObjectContext, dataController.container.viewContext)
+            NavigationStack{
+                HomeView()
+            }
         }
+        .environment(\.managedObjectContext, dataController.container.viewContext)
     }
 }
