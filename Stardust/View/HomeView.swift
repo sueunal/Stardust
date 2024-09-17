@@ -37,7 +37,7 @@ struct HomeView: View {
     func toDoListView()->some View{
         VStack{
             NavigationLink{
-                ToDoItem()
+                ToDoListView()
                     .environment(\.managedObjectContext, moc)
             }label: {
                 Text("작성한 메모")

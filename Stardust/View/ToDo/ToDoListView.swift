@@ -7,11 +7,11 @@
 import SwiftUI
 
 
-struct ToDoItem: View {
+struct ToDoListView: View {
     @FetchRequest(sortDescriptors: []) var plans: FetchedResults<Plan>
+    @Environment(\.managedObjectContext) var viewContext
     @State private var isComplete: Bool = false
     let gardient = AngularGradient(colors: [.black, .white], center: .top)
-    
     var body: some View {
         NavigationStack{
             ZStack{
@@ -23,20 +23,27 @@ struct ToDoItem: View {
                         .foregroundStyle(.white)
                     ScrollView{
                         ForEach(plans){ plan in
-                            Text(plan.planTitle ?? "")
-                            Text(plan.date ?? "")
-                            
-//                            Toggle(isOn: $isComplete){
-//                                plan.isComplete.toggle()
-//                            }
+                            LazyVGrid(columns: [GridItem(.fixed(150)),GridItem(.fixed(150))]){
+                                toDoItemView(plan)
+                            }
                         }
-                        .font(.largeTitle)
-                        .foregroundStyle(.black)
                     }
                 }
                 .padding(.horizontal,16)
             }
         }
+    }
+    @ViewBuilder
+    func toDoItemView(_ plan: FetchedResults<Plan>.Element) -> some View{
+        VStack{
+            Text(plan.planTitle ?? "값을 불러올수없습니다.")
+            Text(plan.date ?? "값을 불러올수없습니다.")
+        }
+        .padding(300)
+        .background(
+            RoundedRectangle(cornerRadius: 10)
+                .fill(.white)
+        )
     }
     func dataToString(_ timestamp: Int)-> String{
         let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
@@ -47,8 +54,19 @@ struct ToDoItem: View {
         
         return dateFormatter.string(from: date)
     }
+    func updatePlanComplete(){
+        guard let plan = plans.first else {
+           return
+        }
+        plan.isComplete.toggle()
+        do {
+           try viewContext.save()
+        }catch{
+            print("update error : \(error.localizedDescription)")
+        }
+    }
 }
 
 #Preview {
-    ToDoItem()
+    ToDoListView()
 }
